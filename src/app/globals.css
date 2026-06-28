@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+:root {
+  --bg-cream: #f4ede1;
+  --bg-cream-2: #ede3d2;
+  --ink: #1f1a14;
+  --ink-soft: #2a241c;
+  --muted: #6b6053;
+  --gold: #b08a45;
+  --gold-dark: #8e6e34;
+  --rose: #c69383;
+  --rose-deep: #8c5847;
+  --line: rgba(31, 26, 20, 0.12);
+}
+
+@theme inline {
+  --color-bg-cream: var(--bg-cream);
+  --color-bg-cream-2: var(--bg-cream-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-rose: var(--rose);
+  --color-rose-deep: var(--rose-deep);
+  --color-line: var(--line);
+  --font-display: var(--font-display);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-cream);
+  color: var(--ink);
+}
+
+body {
+  background: var(--bg-cream);
+  color: var(--ink);
+}
+
+.font-display {
+  font-family: var(--font-display), "Cormorant Garamond", serif;
+  letter-spacing: 0.03em;
+}
+
+.font-serif {
+  font-family: var(--font-serif), "Cormorant Garamond", serif;
+}
+
+.eyebrow {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold-dark);
+}
+
+.menu-link {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.menu-link:hover {
+  color: var(--gold-dark);
+}
+
+.section-rule {
+  position: relative;
+}
+
+.section-rule::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: var(--gold);
+  margin-top: 1rem;
+}
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.05rem 1.75rem;
+  background: var(--ink);
+  color: var(--bg-cream);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1px solid var(--ink);
+  transition: all 0.25s ease;
+  border-radius: 2px;
+}
+
+.cta-primary:hover {
+  background: var(--gold-dark);
+  color: #fff;
+  border-color: var(--gold-dark);
+}
+
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 0.35rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cta-secondary:hover {
+  color: var(--gold-dark);
+  border-color: var(--gold-dark);
+}
+
+.spin-slow {
+  animation: spin 22s linear infinite;
+}
+.spin-slower {
+  animation: spin 38s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.marquee {
+  display: flex;
+  gap: 4rem;
+  animation: marquee 36s linear infinite;
+  will-change: transform;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.bg-pattern {
+  background-image: url('/assets/branding/back-5.png');
+  background-size: 1100px auto;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.bg-pattern-soft {
+  background-image: url('/assets/branding/back-4.png');
+  background-size: 240px auto;
+  background-repeat: repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  opacity: 0.95;
+}
+
+.h-display {
+  font-family: var(--font-serif), "Cormorant Garamond", serif;
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.005em;
+}
+
+.lead {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+}
+
+@media (max-width: 768px) {
+  .menu-link { font-size: 0.66rem; letter-spacing: 0.22em; }
+}
