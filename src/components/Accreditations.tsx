@@ -1,29 +1,35 @@
+import Image from "next/image";
+import { accreditations } from "@/lib/assets";
+
 const items = [
-  { abbr: "GMC", label: "General Medical Council" },
-  { abbr: "CQC", label: "Care Quality Commission" },
-  { abbr: "ISHRS", label: "International Society of Hair Restoration Surgery" },
-  { abbr: "SFP", label: "Save Face Practitioner" },
-  { abbr: "TIOT", label: "The Institute of Trichologists" },
-  { abbr: "ICO", label: "Information Commissioner’s Office" },
+  { src: accreditations.gmc, label: "General Medical Council" },
+  { src: accreditations.cqc, label: "Care Quality Commission" },
+  { src: accreditations.ishrs, label: "Int. Society of Hair Restoration Surgery" },
+  { src: accreditations.tiot, label: "The Institute of Trichologists" },
+  { src: accreditations.ico, label: "Information Commissioner’s Office" },
 ];
 
 export default function Accreditations() {
   return (
-    <section className="py-16 lg:py-20 bg-[--bg-cream-2] border-y border-[--line]">
+    <section className="py-16 lg:py-20 bg-(--bg-cream-2) border-y border-(--line)">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-        <p className="eyebrow text-center mb-10">
-          Regulated &amp; accredited
-        </p>
-        <div className="grid grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-10">
+        <p className="eyebrow text-center mb-12">Regulated &amp; accredited</p>
+        <div className="grid grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 items-center">
           {items.map((i) => (
             <div
-              key={i.abbr}
-              className="flex flex-col items-center text-center gap-2"
+              key={i.label}
+              className="flex flex-col items-center text-center gap-4"
             >
-              <div className="w-16 h-16 lg:w-20 lg:h-20 border border-[--ink]/40 rounded-full flex items-center justify-center font-serif text-lg lg:text-xl text-[--ink]">
-                {i.abbr}
+              <div className="relative h-16 lg:h-[4.5rem] w-full">
+                <Image
+                  src={i.src}
+                  alt={i.label}
+                  fill
+                  sizes="160px"
+                  className="object-contain"
+                />
               </div>
-              <span className="text-[0.7rem] uppercase tracking-[0.18em] text-[--muted] leading-tight">
+              <span className="text-[0.66rem] uppercase tracking-[0.16em] text-(--muted) leading-snug max-w-[14ch]">
                 {i.label}
               </span>
             </div>

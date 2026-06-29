@@ -49,12 +49,14 @@ body {
   font-family: var(--font-serif), "Cormorant Garamond", serif;
 }
 
+/* The brand's own Kinfolk titling face carries the section labels — its
+   caps-only didone forms are the recurring signature throughout the page. */
 .eyebrow {
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.32em;
+  font-family: var(--font-display), "Cormorant Garamond", serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.34em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--gold-dark);
 }
 

@@ -18,9 +18,9 @@ export default function EmotionalHook() {
                 priority
                 unoptimized
               />
-              <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[--bg-cream]/80 to-transparent pointer-events-none" />
+              <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-(--bg-cream)/80 to-transparent pointer-events-none" />
             </div>
-            <p className="mt-4 text-[0.7rem] uppercase tracking-[0.32em] text-[--muted]">
+            <p className="mt-4 text-[0.7rem] uppercase tracking-[0.32em] text-(--muted)">
               Real concern, treated with care
             </p>
           </div>
@@ -30,7 +30,7 @@ export default function EmotionalHook() {
             <h2 className="h-display text-[2.4rem] sm:text-[3rem] lg:text-[3.8rem] !leading-[1.05] mb-3 max-w-[20ch]">
               It doesn’t start with going bald.
             </h2>
-            <h3 className="font-serif italic text-[1.8rem] lg:text-[2.4rem] text-[--rose-deep] mb-10">
+            <h3 className="font-serif italic text-[1.8rem] lg:text-[2.4rem] text-(--rose-deep) mb-10">
               It starts like this.
             </h3>
 
@@ -41,7 +41,7 @@ export default function EmotionalHook() {
               <p>
                 You’re not imagining it, and you’re far from alone. Whether it’s female-pattern thinning, hormonal change, stress, or years of tight styling and extensions, the result feels the same: hair that no longer feels like yours.
               </p>
-              <p className="font-medium text-[--ink]">
+              <p className="font-medium text-(--ink)">
                 The good news? It’s treatable. And you don’t have to lose your length, or your privacy, to do something about it.
               </p>
             </div>

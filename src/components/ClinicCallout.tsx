@@ -16,7 +16,7 @@ export default function ClinicCallout() {
       <div className="relative h-full flex items-center">
         <div className="mx-auto max-w-[1440px] w-full px-6 lg:px-12">
           <div className="max-w-2xl text-white">
-            <p className="eyebrow !text-[--rose] mb-5">Inside the clinic</p>
+            <p className="eyebrow !text-(--rose) mb-5">Inside the clinic</p>
             <h2 className="h-display text-[2.4rem] lg:text-[3.6rem] !text-white !leading-[1.06] mb-6">
               A calm, unmarked townhouse in Little Venice.
             </h2>

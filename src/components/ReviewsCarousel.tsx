@@ -1,8 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { reviewsScreenshot } from "@/lib/assets";
 
 type Review = {
   name: string;
@@ -86,7 +88,7 @@ export default function ReviewsCarousel() {
   }, [emblaApi]);
 
   return (
-    <section className="py-20 lg:py-28 bg-[--bg-cream-2] border-y border-[--line] relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-(--bg-cream-2) border-y border-(--line) relative overflow-hidden">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14">
           <div>
@@ -107,16 +109,16 @@ export default function ReviewsCarousel() {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
                     key={i}
-                    className="w-5 h-5 fill-[--gold] text-[--gold]"
+                    className="w-5 h-5 fill-(--gold) text-(--gold)"
                   />
                 ))}
               </div>
-              <span className="font-extrabold text-2xl text-[--ink]">4.8</span>
+              <span className="font-extrabold text-2xl text-(--ink)">4.8</span>
             </div>
-            <div className="text-sm font-medium text-[--muted] group-hover:text-[--ink] transition-colors">
+            <div className="text-sm font-medium text-(--muted) group-hover:text-(--ink) transition-colors">
               Based on 116+ Google reviews
               <br />
-              <span className="text-[--gold-dark] underline underline-offset-4">
+              <span className="text-(--gold-dark) underline underline-offset-4">
                 Read them on Google →
               </span>
             </div>
@@ -130,7 +132,7 @@ export default function ReviewsCarousel() {
                 key={i}
                 className="flex-[0_0_85%] sm:flex-[0_0_55%] lg:flex-[0_0_32%] pl-6 lg:pl-7"
               >
-                <div className="bg-[--bg-cream] border border-[--line] p-8 h-full flex flex-col shadow-[0_4px_24px_-12px_rgba(31,26,20,0.15)]">
+                <div className="bg-(--bg-cream) border border-(--line) p-8 h-full flex flex-col shadow-[0_4px_24px_-12px_rgba(31,26,20,0.15)]">
                   <div className="flex items-center gap-3 mb-5">
                     <div
                       className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${r.color}`}
@@ -138,10 +140,10 @@ export default function ReviewsCarousel() {
                       {r.initial}
                     </div>
                     <div>
-                      <div className="font-semibold text-[--ink] text-sm">
+                      <div className="font-semibold text-(--ink) text-sm">
                         {r.name}
                       </div>
-                      <div className="text-xs text-[--muted]">{r.date}</div>
+                      <div className="text-xs text-(--muted)">{r.date}</div>
                     </div>
                     <svg
                       viewBox="0 0 24 24"
@@ -170,11 +172,11 @@ export default function ReviewsCarousel() {
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
-                        className="w-4 h-4 fill-[--gold] text-[--gold]"
+                        className="w-4 h-4 fill-(--gold) text-(--gold)"
                       />
                     ))}
                   </div>
-                  <p className="text-[--ink-soft] text-[0.95rem] leading-relaxed line-clamp-7 flex-1">
+                  <p className="text-(--ink-soft) text-[0.95rem] leading-relaxed line-clamp-7 flex-1">
                     “{r.body}”
                   </p>
                 </div>
@@ -188,7 +190,7 @@ export default function ReviewsCarousel() {
             type="button"
             onClick={() => emblaApi?.scrollPrev()}
             disabled={!canPrev}
-            className="w-11 h-11 rounded-full border border-[--ink] flex items-center justify-center text-[--ink] hover:bg-[--ink] hover:text-[--bg-cream] transition disabled:opacity-30"
+            className="w-11 h-11 rounded-full border border-(--ink) flex items-center justify-center text-(--ink) hover:bg-(--ink) hover:text-(--bg-cream) transition disabled:opacity-30"
             aria-label="Previous"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -197,11 +199,45 @@ export default function ReviewsCarousel() {
             type="button"
             onClick={() => emblaApi?.scrollNext()}
             disabled={!canNext}
-            className="w-11 h-11 rounded-full border border-[--ink] flex items-center justify-center text-[--ink] hover:bg-[--ink] hover:text-[--bg-cream] transition disabled:opacity-30"
+            className="w-11 h-11 rounded-full border border-(--ink) flex items-center justify-center text-(--ink) hover:bg-(--ink) hover:text-(--bg-cream) transition disabled:opacity-30"
             aria-label="Next"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
+        </div>
+
+        <div className="mt-16 lg:mt-20 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="lg:col-span-5">
+            <p className="eyebrow mb-4">Straight from Google</p>
+            <h3 className="h-display text-[1.7rem] lg:text-[2.2rem] !leading-[1.12] mb-4">
+              Unedited, and easy to verify.
+            </h3>
+            <p className="lead max-w-[44ch]">
+              We don’t cherry-pick. Every review above is public on our Google
+              Business profile — here’s the live snapshot, exactly as you’ll find
+              it.
+            </p>
+            <a
+              href="https://maps.app.goo.gl/r5RWkVwTsqsCDrK56"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-secondary mt-7"
+            >
+              Verify on Google
+            </a>
+          </div>
+          <div className="lg:col-span-7">
+            <div className="bg-white p-2.5 lg:p-3 border border-(--line) shadow-[0_30px_60px_-30px_rgba(31,26,20,0.35)]">
+              <Image
+                src={reviewsScreenshot}
+                alt="Screenshot of Fortes Clinic’s verified Google reviews"
+                width={1466}
+                height={864}
+                sizes="(min-width: 1024px) 56vw, 100vw"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ const items = [
 
 export default function Aftercare() {
   return (
-    <section className="py-24 lg:py-32 bg-[--bg-cream]">
+    <section className="py-24 lg:py-32 bg-(--bg-cream)">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
@@ -25,8 +25,8 @@ export default function Aftercare() {
             </p>
             <ul className="space-y-4">
               {items.map((i) => (
-                <li key={i} className="flex items-start gap-4 text-[--ink-soft]">
-                  <span className="mt-2 w-6 h-px bg-[--gold-dark] flex-shrink-0" />
+                <li key={i} className="flex items-start gap-4 text-(--ink-soft)">
+                  <span className="mt-2 w-6 h-px bg-(--gold-dark) flex-shrink-0" />
                   <span className="text-[0.95rem] leading-relaxed">{i}</span>
                 </li>
               ))}

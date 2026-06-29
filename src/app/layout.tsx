@@ -54,7 +54,7 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${inter.variable} ${kinfolk.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-[--bg-cream] text-[--ink] font-sans">{children}</body>
+      <body className="min-h-full bg-(--bg-cream) text-(--ink) font-sans">{children}</body>
     </html>
   );
 }

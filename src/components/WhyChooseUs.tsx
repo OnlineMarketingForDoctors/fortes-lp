@@ -37,7 +37,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why" className="py-24 lg:py-32 bg-[--bg-cream-2] relative overflow-hidden">
+    <section id="why" className="py-24 lg:py-32 bg-(--bg-cream-2) relative overflow-hidden">
       <div className="absolute inset-0 bg-pattern opacity-[0.05]" aria-hidden />
       <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-12 mb-16 items-end">
@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
             <h2 className="h-display text-[2.4rem] lg:text-[3.5rem] !leading-[1.06] max-w-[18ch]">
               A clinic that
               <br />
-              <em className="italic font-light text-[--rose-deep]">understands</em> women’s hair.
+              <em className="italic font-light text-(--rose-deep)">understands</em> women’s hair.
             </h2>
           </div>
           <div className="lg:col-span-5 lead max-w-xl lg:text-right lg:ml-auto">
@@ -54,12 +54,12 @@ export default function WhyChooseUs() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[--line]">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-(--line)">
           {reasons.map(({ icon: Icon, title, body }) => (
-            <div key={title} className="bg-[--bg-cream] p-10 flex flex-col gap-5">
-              <Icon className="w-8 h-8 text-[--gold-dark]" strokeWidth={1.6} />
-              <h3 className="font-serif text-2xl text-[--ink] leading-tight" dangerouslySetInnerHTML={{ __html: title }} />
-              <p className="text-[--ink-soft] leading-relaxed text-[0.95rem]" dangerouslySetInnerHTML={{ __html: body }} />
+            <div key={title} className="bg-(--bg-cream) p-10 flex flex-col gap-5">
+              <Icon className="w-8 h-8 text-(--gold-dark)" strokeWidth={1.6} />
+              <h3 className="font-serif text-2xl text-(--ink) leading-tight" dangerouslySetInnerHTML={{ __html: title }} />
+              <p className="text-(--ink-soft) leading-relaxed text-[0.95rem]" dangerouslySetInnerHTML={{ __html: body }} />
             </div>
           ))}
         </div>

@@ -22,10 +22,40 @@ export const photos = {
 };
 
 export const doctor = {
-  saeed: "/assets/doctor/dr-saeed-portrait.png",
+  // Real photograph of Dr Ahmad Saeed (from Drive › Mr Saeed Photos).
+  saeed: "/assets/doctor/dr-saeed-real.png",
+  saeedAlt: "/assets/doctor/dr-saeed-portrait.png",
 };
 
 export const reviewsScreenshot = "/assets/reviews/google-reviews-screenshot.png";
+
+// Real, consented before/after composites (from Drive › Before & After).
+// Each PNG is a single side-by-side panel with "Before"/"After" labels and the
+// Fortes wordmark already baked in, so do not overlay our own captions.
+export const beforeAfter = {
+  frontalHairline: "/assets/results/before-after-1.png",
+  hairlineTemples: "/assets/results/before-after-2.png",
+};
+
+// Real regulatory / membership marks (from Drive › Associations and
+// Accreditations Logos). Replaces the earlier text-circle placeholders.
+export const accreditations = {
+  gmc: "/assets/accreditations/gmc.png",
+  cqc: "/assets/accreditations/cqc.png",
+  ishrs: "/assets/accreditations/ishrs.png",
+  sfp: "/assets/accreditations/sfp.png",
+  tiot: "/assets/accreditations/tiot.png",
+  ico: "/assets/accreditations/ico.png",
+};
+
+// Real press / media marks (from Drive › Media Logos). Replaces the text marquee.
+// press-1 is the Rolls-Royce Enthusiasts' Club partner badge, not a publication,
+// so it is shown separately (as a partnership mark) rather than in the press row.
+export const mediaLogos = [
+  { src: "/assets/media-logos/press-2.png", alt: "Daily Mail" },
+  { src: "/assets/media-logos/press-3.png", alt: "LDN Fashion" },
+  { src: "/assets/media-logos/press-4.png", alt: "The Guardian" },
+];
 
 // Higgsfield CDN — AI-generated, nano_banana_pro/2, served remotely.
 const HF =

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ai } from "@/lib/assets";
+import Reveal from "./Reveal";
 
 const techniques = [
   {
@@ -30,17 +31,17 @@ const techniques = [
 
 export default function Techniques() {
   return (
-    <section id="techniques" className="py-24 lg:py-32 bg-[--bg-cream]">
+    <section id="techniques" className="py-24 lg:py-32 bg-(--bg-cream)">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-        <div className="text-center mb-20">
+        <Reveal className="text-center mb-20">
           <p className="eyebrow mb-5">Two surgical techniques. One specialist.</p>
           <h2 className="h-display text-[2.4rem] lg:text-[3.4rem] max-w-3xl mx-auto !leading-[1.08]">
-            Techniques chosen <em className="italic font-light text-[--rose-deep]">for you,</em> not for us.
+            Techniques chosen <em className="italic font-light text-(--rose-deep)">for you,</em> not for us.
           </h2>
           <p className="lead mt-6 max-w-2xl mx-auto">
             Many women are told they have to choose between a scar and a shave. We don’t accept that. Dr Saeed will recommend the technique, or the combined approach, that protects your privacy, your length, and your long-term result.
           </p>
-        </div>
+        </Reveal>
 
         <div className="space-y-24">
           {techniques.map((t, i) => (
@@ -51,7 +52,7 @@ export default function Techniques() {
               }`}
             >
               <div className="lg:col-span-6">
-                <div className="relative aspect-[4/5] lg:aspect-[5/6] overflow-hidden bg-[--bg-cream-2]">
+                <div className="relative aspect-[4/5] lg:aspect-[5/6] overflow-hidden bg-(--bg-cream-2)">
                   <Image
                     src={t.image}
                     alt={t.title}
@@ -70,8 +71,8 @@ export default function Techniques() {
                 <p className="lead mb-8">{t.body}</p>
                 <ul className="space-y-3 mb-2">
                   {t.points.map((p) => (
-                    <li key={p} className="flex items-start gap-3 text-[--ink-soft]">
-                      <span className="mt-2 w-1.5 h-1.5 bg-[--gold] rounded-full flex-shrink-0" />
+                    <li key={p} className="flex items-start gap-3 text-(--ink-soft)">
+                      <span className="mt-2 w-1.5 h-1.5 bg-(--gold) rounded-full flex-shrink-0" />
                       <span className="text-[0.95rem] leading-relaxed">{p}</span>
                     </li>
                   ))}

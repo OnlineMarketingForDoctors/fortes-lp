@@ -10,7 +10,7 @@ const credentials = [
 
 export default function MeetDoctor() {
   return (
-    <section id="doctor" className="py-24 lg:py-32 bg-[--bg-cream-2] relative overflow-hidden">
+    <section id="doctor" className="py-24 lg:py-32 bg-(--bg-cream-2) relative overflow-hidden">
       <div className="absolute inset-0 bg-pattern opacity-[0.05]" aria-hidden />
       <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
@@ -37,7 +37,7 @@ export default function MeetDoctor() {
             <h2 className="h-display text-[2.4rem] lg:text-[3.4rem] !leading-[1.05] mb-8">
               The same surgeon
               <br />
-              <em className="italic font-light text-[--rose-deep]">from beginning to end.</em>
+              <em className="italic font-light text-(--rose-deep)">from beginning to end.</em>
             </h2>
             <div className="space-y-5 lead max-w-[60ch]">
               <p>
@@ -50,8 +50,8 @@ export default function MeetDoctor() {
 
             <ul className="mt-10 grid sm:grid-cols-2 gap-4">
               {credentials.map((c) => (
-                <li key={c} className="flex items-start gap-3 text-[--ink-soft]">
-                  <span className="mt-1.5 w-2 h-2 bg-[--gold] rounded-full flex-shrink-0" />
+                <li key={c} className="flex items-start gap-3 text-(--ink-soft)">
+                  <span className="mt-1.5 w-2 h-2 bg-(--gold) rounded-full flex-shrink-0" />
                   <span
                     className="text-[0.95rem] leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: c }}

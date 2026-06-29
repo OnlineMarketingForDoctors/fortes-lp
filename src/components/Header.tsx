@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[--bg-cream]/95 backdrop-blur border-b border-[--line]" : "bg-transparent"
+        scrolled ? "bg-(--bg-cream)/95 backdrop-blur border-b border-(--line)" : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
@@ -54,9 +54,9 @@ export default function Header() {
           <div className="flex items-center gap-3 lg:gap-6">
             <a
               href="tel:+442039620303"
-              className="hidden md:flex items-center gap-2 text-[--ink] hover:text-[--gold-dark] transition-colors"
+              className="hidden md:flex items-center gap-2 text-(--ink) hover:text-(--gold-dark) transition-colors"
             >
-              <Phone className="h-5 w-5 text-[--gold-dark]" strokeWidth={2.2} />
+              <Phone className="h-5 w-5 text-(--gold-dark)" strokeWidth={2.2} />
               <span className="font-sans font-extrabold tracking-wide text-[1.05rem] lg:text-[1.25rem]">
                 020 3962 0303
               </span>
@@ -66,7 +66,7 @@ export default function Header() {
             </a>
             <button
               type="button"
-              className="lg:hidden p-2 -mr-2 text-[--ink]"
+              className="lg:hidden p-2 -mr-2 text-(--ink)"
               onClick={() => setOpen((v) => !v)}
               aria-label="Menu"
             >
@@ -76,7 +76,7 @@ export default function Header() {
         </div>
 
         {open && (
-          <div className="lg:hidden border-t border-[--line] py-6 space-y-5">
+          <div className="lg:hidden border-t border-(--line) py-6 space-y-5">
             {nav.map((item) => (
               <a
                 key={item.href}
@@ -89,9 +89,9 @@ export default function Header() {
             ))}
             <a
               href="tel:+442039620303"
-              className="flex items-center gap-2 text-[--ink]"
+              className="flex items-center gap-2 text-(--ink)"
             >
-              <Phone className="h-5 w-5 text-[--gold-dark]" strokeWidth={2.2} />
+              <Phone className="h-5 w-5 text-(--gold-dark)" strokeWidth={2.2} />
               <span className="font-extrabold text-lg">020 3962 0303</span>
             </a>
             <a

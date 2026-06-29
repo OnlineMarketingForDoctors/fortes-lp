@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const steps = [
   {
     n: "01",
@@ -33,23 +35,23 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-24 lg:py-32 bg-[--ink] text-[--bg-cream] relative overflow-hidden">
+    <section className="py-24 lg:py-32 bg-(--ink) text-(--bg-cream) relative overflow-hidden">
       <div className="absolute inset-0 bg-pattern opacity-[0.06]" aria-hidden />
       <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12">
-        <div className="text-center mb-20">
-          <p className="eyebrow !text-[--rose] mb-5">A clear path, beautifully paced</p>
-          <h2 className="h-display text-[2.4rem] lg:text-[3.4rem] !text-[--bg-cream] max-w-3xl mx-auto !leading-[1.08]">
+        <Reveal className="text-center mb-20">
+          <p className="eyebrow !text-(--rose) mb-5">A clear path, beautifully paced</p>
+          <h2 className="h-display text-[2.4rem] lg:text-[3.4rem] !text-(--bg-cream) max-w-3xl mx-auto !leading-[1.08]">
             Six considered steps to your most natural hair.
           </h2>
-        </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[--bg-cream]/10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-(--bg-cream)/10">
           {steps.map((s) => (
             <div
               key={s.n}
-              className="bg-[--ink] p-10 flex flex-col gap-5 hover:bg-[#27201a] transition-colors"
+              className="bg-(--ink) p-10 flex flex-col gap-5 hover:bg-[#27201a] transition-colors"
             >
-              <span className="font-serif italic text-5xl text-[--rose]/90">
+              <span className="font-serif italic text-5xl text-(--rose)/90">
                 {s.n}
               </span>
               <h3
@@ -57,7 +59,7 @@ export default function Process() {
                 dangerouslySetInnerHTML={{ __html: s.title }}
               />
               <p
-                className="text-[--bg-cream]/75 leading-relaxed text-[0.95rem]"
+                className="text-(--bg-cream)/75 leading-relaxed text-[0.95rem]"
                 dangerouslySetInnerHTML={{ __html: s.body }}
               />
             </div>
@@ -65,7 +67,7 @@ export default function Process() {
         </div>
 
         <div className="text-center mt-16">
-          <a href="#consult" className="cta-primary !bg-[--rose] !text-[--ink] !border-[--rose] hover:!bg-white hover:!border-white">
+          <a href="#consult" className="cta-primary !bg-(--rose) !text-(--ink) !border-(--rose) hover:!bg-white hover:!border-white">
             Begin with a Free Consultation
           </a>
         </div>

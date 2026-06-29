@@ -41,13 +41,13 @@ export default function PatientStories() {
   const s = stories[active];
 
   return (
-    <section className="py-24 lg:py-32 bg-[--bg-cream-2] relative overflow-hidden">
+    <section className="py-24 lg:py-32 bg-(--bg-cream-2) relative overflow-hidden">
       <div className="absolute inset-0 bg-pattern opacity-[0.06]" aria-hidden />
       <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="text-center mb-16">
           <p className="eyebrow mb-5">Voices from our patients</p>
           <h2 className="h-display text-[2.4rem] lg:text-[3.4rem] max-w-3xl mx-auto !leading-[1.08]">
-            What it’s like to be a <em className="italic font-light text-[--rose-deep]">Fortes</em> patient.
+            What it’s like to be a <em className="italic font-light text-(--rose-deep)">Fortes</em> patient.
           </h2>
         </div>
 
@@ -65,14 +65,14 @@ export default function PatientStories() {
             </div>
           </div>
           <div className="lg:col-span-7">
-            <Quote className="w-12 h-12 text-[--rose] mb-6" strokeWidth={1} />
-            <blockquote className="font-serif text-[1.6rem] lg:text-[2.1rem] leading-[1.3] text-[--ink] mb-8">
+            <Quote className="w-12 h-12 text-(--rose) mb-6" strokeWidth={1} />
+            <blockquote className="font-serif text-[1.6rem] lg:text-[2.1rem] leading-[1.3] text-(--ink) mb-8">
               “{s.quote}”
             </blockquote>
             <div className="mb-10">
-              <p className="font-semibold text-[--ink]">{s.name}</p>
+              <p className="font-semibold text-(--ink)">{s.name}</p>
               <p
-                className="text-sm text-[--muted] mt-1"
+                className="text-sm text-(--muted) mt-1"
                 dangerouslySetInnerHTML={{ __html: s.detail }}
               />
             </div>
@@ -85,8 +85,8 @@ export default function PatientStories() {
                   onClick={() => setActive(i)}
                   className={`h-1 transition-all ${
                     active === i
-                      ? "bg-[--ink] w-12"
-                      : "bg-[--ink]/20 w-8 hover:bg-[--ink]/40"
+                      ? "bg-(--ink) w-12"
+                      : "bg-(--ink)/20 w-8 hover:bg-(--ink)/40"
                   }`}
                   aria-label={`Story ${i + 1}`}
                 />
