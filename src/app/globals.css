@@ -1,191 +1,180 @@
 @import "tailwindcss";
 
-:root {
-  --bg-cream: #f4ede1;
-  --bg-cream-2: #ede3d2;
-  --ink: #1f1a14;
-  --ink-soft: #2a241c;
-  --muted: #6b6053;
-  --gold: #b08a45;
-  --gold-dark: #8e6e34;
-  --rose: #c69383;
-  --rose-deep: #8c5847;
-  --line: rgba(31, 26, 20, 0.12);
+/* ------------------------------------------------------------------ *
+   Fortes Clinic design system — premium medical-aesthetic identity.
+   Dark charcoal grounds, warm gold gradient accent, Kinfolk caps
+   display type over clean humanist sans body. Tokens are exposed as
+   Tailwind v4 theme colours so `bg-gold`, `text-charcoal` etc. work.
+ * ------------------------------------------------------------------ */
+@theme inline {
+  --color-gold: #b28b45;
+  --color-gold-light: #f1c77a;
+  --color-gold-bright: #f6bb06;
+  --color-black: #000000;
+  --color-ink: #222222;
+  --color-charcoal: #353b3f;
+  --color-slate: #2b3034;
+  --color-gray: #69727d;
+  --color-gray-mid: #555555;
+  --color-gray-soft: #888888;
+  --color-bg-light: #f5f5f5;
+  --color-bg-lighter: #f7f7f7;
+  --color-line: #ededed;
+  --color-cream: #faf6ec;
+  --color-whatsapp: #25d366;
+
+  --font-display: var(--font-kinfolk), "Marcellus", "Cormorant Garamond", serif;
+  --font-heading: var(--font-roboto), system-ui, sans-serif;
+  --font-ui: var(--font-montserrat), system-ui, sans-serif;
+  --font-body: var(--font-open-sans), system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-bg-cream: var(--bg-cream);
-  --color-bg-cream-2: var(--bg-cream-2);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-muted: var(--muted);
-  --color-gold: var(--gold);
-  --color-gold-dark: var(--gold-dark);
-  --color-rose: var(--rose);
-  --color-rose-deep: var(--rose-deep);
-  --color-line: var(--line);
-  --font-display: var(--font-display);
-  --font-serif: var(--font-serif);
-  --font-sans: var(--font-sans);
+:root {
+  --gold-gradient: linear-gradient(45deg, #b28b45 0%, #f1c77a 100%);
+  --overlay: rgba(0, 0, 0, 0.68);
+  --shadow-soft: 0 18px 40px -18px rgba(0, 0, 0, 0.35);
+  --shadow-gold: 0 14px 30px -8px rgba(178, 139, 69, 0.45);
 }
 
 html {
   scroll-behavior: smooth;
-  background: var(--bg-cream);
-  color: var(--ink);
 }
 
 body {
-  background: var(--bg-cream);
-  color: var(--ink);
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: #ffffff;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-.font-display {
-  font-family: var(--font-display), "Cormorant Garamond", serif;
-  letter-spacing: 0.03em;
-}
-
-.font-serif {
-  font-family: var(--font-serif), "Cormorant Garamond", serif;
-}
-
-/* The brand's own Kinfolk titling face carries the section labels — its
-   caps-only didone forms are the recurring signature throughout the page. */
-.eyebrow {
-  font-family: var(--font-display), "Cormorant Garamond", serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.34em;
+/* Display headings — Kinfolk caps, wide tracking */
+.h-display {
+  font-family: var(--font-display);
   text-transform: uppercase;
+  letter-spacing: 0.08em;
   font-weight: 400;
-  color: var(--gold-dark);
+  line-height: 1.12;
 }
 
-.menu-link {
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 0.74rem;
-  letter-spacing: 0.28em;
+.eyebrow {
+  font-family: var(--font-ui);
   text-transform: uppercase;
-  font-weight: 700;
-  color: var(--ink);
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-gold);
 }
 
-.menu-link:hover {
-  color: var(--gold-dark);
+.lead {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
-.section-rule {
-  position: relative;
+.heading-sans {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  letter-spacing: -0.01em;
 }
 
-.section-rule::after {
-  content: "";
-  display: block;
-  width: 56px;
-  height: 1px;
-  background: var(--gold);
-  margin-top: 1rem;
-}
-
-.cta-primary {
+/* Buttons */
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  padding: 1.05rem 1.75rem;
-  background: var(--ink);
-  color: var(--bg-cream);
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 0.74rem;
-  letter-spacing: 0.28em;
+  cursor: pointer;
+  font-family: var(--font-ui);
   text-transform: uppercase;
-  font-weight: 700;
-  border: 1px solid var(--ink);
-  transition: all 0.25s ease;
-  border-radius: 2px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    color 0.2s ease;
 }
 
-.cta-primary:hover {
-  background: var(--gold-dark);
+.btn-primary {
+  background: var(--gold-gradient);
   color: #fff;
-  border-color: var(--gold-dark);
+  font-size: 0.92rem;
+  padding: 1.15rem 2rem;
+  box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px -8px rgba(178, 139, 69, 0.5);
 }
 
-.cta-secondary {
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  padding: 1.05rem 1.7rem;
+  border: 1.5px solid var(--color-gold);
+}
+.btn-ghost:hover {
+  background: var(--color-gold);
+  color: #fff;
+}
+
+.btn-text {
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--color-gold);
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 0.74rem;
-  letter-spacing: 0.28em;
+  gap: 0.5rem;
+  border-bottom: 1.5px solid currentColor;
+  padding-bottom: 0.3rem;
+}
+
+.gold-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-link {
+  font-family: var(--font-ui);
   text-transform: uppercase;
+  letter-spacing: 0.14em;
   font-weight: 700;
-  color: var(--ink);
-  border-bottom: 1px solid var(--ink);
-  padding-bottom: 0.35rem;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  font-size: 0.78rem;
 }
 
-.cta-secondary:hover {
-  color: var(--gold-dark);
-  border-color: var(--gold-dark);
+/* Lattice / brand watermark on dark sections */
+.lattice {
+  position: relative;
 }
-
-.spin-slow {
-  animation: spin 22s linear infinite;
-}
-.spin-slower {
-  animation: spin 38s linear infinite;
-}
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.marquee {
-  display: flex;
-  gap: 4rem;
-  animation: marquee 36s linear infinite;
-  will-change: transform;
-}
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-.bg-pattern {
-  background-image: url('/assets/branding/back-5.png');
-  background-size: 1100px auto;
+.lattice::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/branding/back-4.png");
+  background-size: 460px auto;
   background-repeat: repeat;
-  background-position: center;
+  opacity: 0.06;
+  pointer-events: none;
+}
+.lattice > * {
+  position: relative;
+  z-index: 1;
 }
 
-.bg-pattern-soft {
-  background-image: url('/assets/branding/back-4.png');
-  background-size: 240px auto;
-  background-repeat: repeat;
-  background-position: center;
-  background-blend-mode: multiply;
-  opacity: 0.95;
-}
-
-.h-display {
-  font-family: var(--font-serif), "Cormorant Garamond", serif;
-  font-weight: 400;
-  line-height: 1.04;
-  letter-spacing: -0.005em;
-}
-
-.lead {
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.65;
-  color: var(--ink-soft);
-}
-
-.divider {
+.divider-line {
   height: 1px;
-  background: var(--line);
+  background: var(--color-line);
 }
 
-@media (max-width: 768px) {
-  .menu-link { font-size: 0.66rem; letter-spacing: 0.22em; }
+@media (max-width: 1024px) {
+  .nav-link {
+    letter-spacing: 0.1em;
+  }
 }

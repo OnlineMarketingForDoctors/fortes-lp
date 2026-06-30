@@ -1,75 +1,56 @@
-import Reveal from "./Reveal";
+import { MessagesSquare, ClipboardList, CalendarCheck, HeartPulse, Sprout, BadgeCheck } from "lucide-react";
 
 const steps = [
-  {
-    n: "01",
-    title: "Free Consultation",
-    body: "An unhurried conversation with Dr Saeed himself. Trichology assessment of your scalp, a full review of medical history, and a candid discussion of what is and isn’t achievable for your hair.",
-  },
-  {
-    n: "02",
-    title: "Personalised Plan",
-    body: "Bespoke hairline or density design, precise graft count, technique recommendation (FUE, FUT or combined), realistic timeline and a fully transparent cost. No pressure, ever.",
-  },
-  {
-    n: "03",
-    title: "Pre-Procedure Preparation",
-    body: "Clear pre-op instructions, medication guidance and a private welcome appointment. We answer every question so you arrive on the day relaxed.",
-  },
-  {
-    n: "04",
-    title: "Your Procedure Day",
-    body: "A calm, single-session day under local anaesthetic. Dr Saeed performs the extraction, design and placement personally. You leave with comprehensive aftercare and a direct line to the team.",
-  },
-  {
-    n: "05",
-    title: "Recovery &amp; Regrowth",
-    body: "Visible regrowth begins around 4 months. Most patients see meaningful density by 6 months and the full result at 12 months. We walk every step of that journey with you.",
-  },
-  {
-    n: "06",
-    title: "6 &amp; 12 Month Reviews",
-    body: "Two surgeon-led follow-ups included as standard. We document your regrowth, advise on long-term care, and make sure the result you wanted is the result you’re wearing.",
-  },
+  { icon: MessagesSquare, title: "Free Initial Consultation", body: "An unhurried conversation with Dr Saeed himself: a trichology assessment of your scalp, a review of your history, and a candid discussion of what is realistically achievable for your hair." },
+  { icon: ClipboardList, title: "Personalised Treatment Plan", body: "Bespoke hairline or density design, a precise graft count, your recommended technique (FUE, FUT or combined), a realistic timeline and fully transparent pricing. No pressure, ever." },
+  { icon: CalendarCheck, title: "Pre-Procedure Preparation", body: "Clear pre-op instructions, medication guidance and a private welcome appointment, so every question is answered and you arrive on the day completely relaxed." },
+  { icon: HeartPulse, title: "Your Procedure Day", body: "A calm, single-session day under local anaesthetic. Dr Saeed performs the extraction, design and placement personally, with no full head shave and no overnight stay." },
+  { icon: Sprout, title: "Recovery & Regrowth", body: "Visible regrowth typically begins around four months, with meaningful density by six months and your full result at twelve. We walk every step of that journey with you." },
+  { icon: BadgeCheck, title: "6 & 12 Month Reviews", body: "Two surgeon-led follow-ups are included as standard, documenting your regrowth and protecting the result you came to us for." },
 ];
 
 export default function Process() {
   return (
-    <section className="py-24 lg:py-32 bg-(--ink) text-(--bg-cream) relative overflow-hidden">
-      <div className="absolute inset-0 bg-pattern opacity-[0.06]" aria-hidden />
-      <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12">
-        <Reveal className="text-center mb-20">
-          <p className="eyebrow !text-(--rose) mb-5">A clear path, beautifully paced</p>
-          <h2 className="h-display text-[2.4rem] lg:text-[3.4rem] !text-(--bg-cream) max-w-3xl mx-auto !leading-[1.08]">
-            Six considered steps to your most natural hair.
-          </h2>
-        </Reveal>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-(--bg-cream)/10">
-          {steps.map((s) => (
-            <div
-              key={s.n}
-              className="bg-(--ink) p-10 flex flex-col gap-5 hover:bg-[#27201a] transition-colors"
-            >
-              <span className="font-serif italic text-5xl text-(--rose)/90">
-                {s.n}
-              </span>
-              <h3
-                className="font-serif text-2xl leading-tight"
-                dangerouslySetInnerHTML={{ __html: s.title }}
-              />
-              <p
-                className="text-(--bg-cream)/75 leading-relaxed text-[0.95rem]"
-                dangerouslySetInnerHTML={{ __html: s.body }}
-              />
+    <section className="bg-white py-20 lg:py-28">
+      <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <div className="lg:sticky lg:top-28">
+              <p className="eyebrow mb-4">A clear path, beautifully paced</p>
+              <h2 className="h-display text-[2rem] lg:text-[2.8rem] !leading-[1.12] text-ink mb-6">
+                Simple Steps to Natural Hair Restoration
+              </h2>
+              <p className="lead text-gray-mid max-w-[46ch] mb-8">
+                From your first consultation to your full result, we guide you
+                through every stage with expert care, transparent communication
+                and complete aftercare support.
+              </p>
+              <a href="#consult" className="btn btn-primary">
+                Book Your Free Consultation
+              </a>
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="text-center mt-16">
-          <a href="#consult" className="cta-primary !bg-(--rose) !text-(--ink) !border-(--rose) hover:!bg-white hover:!border-white">
-            Begin with a Free Consultation
-          </a>
+          <div className="lg:col-span-7">
+            <ol className="rounded-[12px] border border-line shadow-[var(--shadow-soft)] divide-y divide-line overflow-hidden">
+              {steps.map(({ icon: Icon, title, body }, i) => (
+                <li key={title} className="flex gap-5 p-7 lg:p-8 bg-white">
+                  <div className="flex-shrink-0 flex flex-col items-center gap-2">
+                    <span className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold">
+                      <Icon className="w-5 h-5" strokeWidth={1.8} />
+                    </span>
+                    <span className="font-display text-gold text-xs tracking-[0.2em]">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="heading-sans text-lg text-ink mb-1.5">{title}</h3>
+                    <p className="text-gray text-[0.95rem] leading-relaxed">{body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
     </section>

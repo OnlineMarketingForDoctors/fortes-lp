@@ -1,19 +1,18 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import PressStrip from "@/components/PressStrip";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import EmotionalHook from "@/components/EmotionalHook";
-import PressStrip from "@/components/PressStrip";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import Techniques from "@/components/Techniques";
-import Process from "@/components/Process";
 import Results from "@/components/Results";
+import WhatSetsUsApart from "@/components/WhatSetsUsApart";
+import WhyChoose from "@/components/WhyChoose";
+import FeaturedStory from "@/components/FeaturedStory";
+import SocialProof from "@/components/SocialProof";
 import MeetDoctor from "@/components/MeetDoctor";
+import Process from "@/components/Process";
 import Aftercare from "@/components/Aftercare";
-import Accreditations from "@/components/Accreditations";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
-import PatientStories from "@/components/PatientStories";
-import ClinicCallout from "@/components/ClinicCallout";
 
 export default function Home() {
   return (
@@ -21,18 +20,17 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <PressStrip />
         <ReviewsCarousel />
         <EmotionalHook />
-        <PressStrip />
-        <WhyChooseUs />
-        <Techniques />
-        <Process />
         <Results />
-        <ClinicCallout />
+        <WhatSetsUsApart />
+        <WhyChoose />
+        <FeaturedStory />
+        <SocialProof />
         <MeetDoctor />
-        <PatientStories />
+        <Process />
         <Aftercare />
-        <Accreditations />
         <ContactForm />
       </main>
       <Footer />

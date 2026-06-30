@@ -1,74 +1,74 @@
-// Central asset registry.
-// Local assets live under /public. AI-generated images are referenced via
-// remote URL (CDN), since the Higgsfield CDN isn't fetchable from the build
-// environment but is publicly accessible in browsers.
+// Central asset registry for the Fortes Clinic — Female Hair Transplant LP.
+// Real brand assets live under /public/assets (from the Drive "Assets" folder).
+// AI imagery is generated with Higgsfield nano_banana_pro and referenced from
+// the Higgsfield CDN (publicly served, so kept as remote URLs + unoptimized).
+
+const HF =
+  "https://d8j0ntlcm91z4.cloudfront.net/user_3Ary2g06ZSWzxFoVWIP644Wm9ZG/";
 
 export const logos = {
   fortes: "/assets/logos/fortes-clinic-logo.png",
   spinning: "/assets/logos/spinning-logo.png",
 };
 
-export const branding = {
-  pattern: "/assets/branding/back-5.png",
-  patternSoft: "/assets/branding/back-4.png",
-};
-
 export const video = {
   hero: "/assets/hero-video.mp4",
 };
 
-export const photos = {
-  femalePatternHairLoss: "/assets/photos/female-pattern-hair-loss.jpg",
+export const doctor = {
+  // Real photograph of Dr Ahmad Saeed in front of the gold Fortes ring.
+  saeed: "/assets/doctor/dr-saeed-real.png",
 };
 
-export const doctor = {
-  // Real photograph of Dr Ahmad Saeed (from Drive › Mr Saeed Photos).
-  saeed: "/assets/doctor/dr-saeed-real.png",
-  saeedAlt: "/assets/doctor/dr-saeed-portrait.png",
+export const photos = {
+  femalePattern: "/assets/photos/female-pattern-hair-loss.jpg",
 };
 
 export const reviewsScreenshot = "/assets/reviews/google-reviews-screenshot.png";
 
-// Real, consented before/after composites (from Drive › Before & After).
-// Each PNG is a single side-by-side panel with "Before"/"After" labels and the
-// Fortes wordmark already baked in, so do not overlay our own captions.
+// Real consented before/after composites (labels + Fortes mark baked in).
 export const beforeAfter = {
   frontalHairline: "/assets/results/before-after-1.png",
   hairlineTemples: "/assets/results/before-after-2.png",
 };
 
-// Real regulatory / membership marks (from Drive › Associations and
-// Accreditations Logos). Replaces the earlier text-circle placeholders.
-export const accreditations = {
-  gmc: "/assets/accreditations/gmc.png",
-  cqc: "/assets/accreditations/cqc.png",
-  ishrs: "/assets/accreditations/ishrs.png",
-  sfp: "/assets/accreditations/sfp.png",
-  tiot: "/assets/accreditations/tiot.png",
-  ico: "/assets/accreditations/ico.png",
-};
+// Real regulatory / membership marks.
+export const accreditations = [
+  { src: "/assets/accreditations/gmc.png", label: "General Medical Council" },
+  { src: "/assets/accreditations/cqc.png", label: "Care Quality Commission" },
+  { src: "/assets/accreditations/ishrs.png", label: "ISHRS" },
+  { src: "/assets/accreditations/tiot.png", label: "Institute of Trichologists" },
+  { src: "/assets/accreditations/ico.png", label: "ICO Registered" },
+];
 
-// Real press / media marks (from Drive › Media Logos). Replaces the text marquee.
-// press-1 is the Rolls-Royce Enthusiasts' Club partner badge, not a publication,
-// so it is shown separately (as a partnership mark) rather than in the press row.
+// Real press / award marks for the trust strip.
 export const mediaLogos = [
+  { src: "/assets/media-logos/hero-slide1.png", alt: "Strive for Perfection Award" },
   { src: "/assets/media-logos/press-2.png", alt: "Daily Mail" },
   { src: "/assets/media-logos/press-3.png", alt: "LDN Fashion" },
   { src: "/assets/media-logos/press-4.png", alt: "The Guardian" },
 ];
 
-// Higgsfield CDN — AI-generated, nano_banana_pro/2, served remotely.
-const HF =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_3Ary2g06ZSWzxFoVWIP644Wm9ZG";
-
+// AI imagery (Higgsfield nano_banana_pro) — detailed, skin-texture-realistic.
 export const ai = {
-  womanPartingHero: `${HF}/hf_20260628_223859_b2a5bf16-be60-4581-bd34-bd042c082b33.png`,
-  womanBlackPortrait: `${HF}/hf_20260628_223903_0f0bc05c-9252-4865-bceb-b55b96669f7f.png`,
-  womanMaturePortrait: `${HF}/hf_20260628_223907_50b399aa-55d8-4d57-8e25-8e48963361fe.png`,
-  scalpDensity: `${HF}/hf_20260628_223911_2ab19cf1-fd17-4e8f-b252-332bb7dc32d5.png`,
-  womanSouthAsian: `${HF}/hf_20260628_224221_5413189d-e252-4607-9dd8-628f79c0b66e.png`,
-  clinicInterior: `${HF}/hf_20260628_224226_530b3201-903f-4301-a432-346d12bdfffe.png`,
-  womanBlondeWindow: `${HF}/hf_20260628_224232_c6dc69c6-dcd9-43db-a562-38050f98f989.png`,
-  surgeonHands: `${HF}/hf_20260628_224236_7b620c04-b816-4cc6-8c81-a55158920ca3.png`,
-  handThroughHair: `${HF}/hf_20260628_224238_29634735-c283-4842-abf4-d2ac6c91bd7f.png`,
+  emotionalHook: HF + "hf_20260630_233936_21e9f321-67a4-46f5-b8c3-e1271628afb1.png",
+  womanHero: HF + "hf_20260630_233940_c0a518e1-6ef7-468d-8f44-f86155c21a79.png",
+  clinicInterior: HF + "hf_20260630_233942_1814ec02-7241-4fb1-99eb-beb7de66fd03.png",
+  fueTechnique: HF + "hf_20260630_233944_1298a54c-01fd-4e3c-be94-be1581e71f60.png",
+  densityCloseup: HF + "hf_20260630_233947_093447a4-a6d1-4f38-9a1a-b867410a1d86.png",
+  patientSouthAsian: HF + "hf_20260630_233948_0f9bd282-6e09-4721-b19d-e622fe9fa6b1.png",
+  patientBlonde: HF + "hf_20260630_233950_bf2f9fb4-8131-4a6f-9a9a-3379ecc9f470.png",
+  patientMature: HF + "hf_20260630_233952_db26bf91-a661-4e26-967d-061f2b6c499b.png",
+  aftercare: HF + "hf_20260630_233954_41d85b4a-2d3c-4e73-ae7d-af1d50d22222.png",
+};
+
+export const clinic = {
+  phone: "020 3962 0303",
+  phoneHref: "tel:+442039620303",
+  email: "hello@fortesclinic.co.uk",
+  whatsapp: "https://wa.me/442039620303",
+  address: "22 Clifton Road, Little Venice, London W9 1ST",
+  reviewsUrl: "https://maps.app.goo.gl/r5RWkVwTsqsCDrK56",
+  rating: "4.8",
+  reviewCount: "116",
 };

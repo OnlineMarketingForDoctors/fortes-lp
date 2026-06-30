@@ -1,113 +1,146 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
-import { Check } from "lucide-react";
+import { Check, Phone, Mail, MapPin } from "lucide-react";
+import { ai, clinic } from "@/lib/assets";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="consult" className="py-24 lg:py-32 bg-(--ink) text-(--bg-cream) relative overflow-hidden">
-      <div className="absolute inset-0 bg-pattern opacity-[0.06]" aria-hidden />
-      <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-          <div className="lg:col-span-5">
-            <p className="eyebrow !text-(--rose) mb-5">Begin privately</p>
-            <h2 className="h-display text-[2.4rem] lg:text-[3.4rem] !leading-[1.05] !text-(--bg-cream) mb-8">
-              Request a consultation with <em className="italic font-light text-(--rose)">Dr Saeed.</em>
-            </h2>
-            <p className="lead !text-(--bg-cream)/80 max-w-[50ch] mb-10">
-              A private, clinician-led conversation about your hair, your goals and the realistic outcomes available to you. There is never any pressure to proceed.
-            </p>
-            <div className="space-y-4 text-(--bg-cream)/85 text-sm">
-              <div>
-                <span className="block text-(--rose) uppercase tracking-[0.24em] text-[0.65rem] font-bold mb-1">
-                  Clinic
-                </span>
-                Fortes Clinic, 22 Clifton Road, Little Venice, London W9 1ST
-              </div>
-              <div>
-                <span className="block text-(--rose) uppercase tracking-[0.24em] text-[0.65rem] font-bold mb-1">
-                  Call
-                </span>
-                <a href="tel:+442039620303" className="text-xl font-bold tracking-wide hover:text-(--rose)">
-                  020 3962 0303
+    <section id="consult" className="bg-charcoal lattice text-white py-20 lg:py-28 overflow-hidden">
+      <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
+          {/* Left: image + details */}
+          <div className="lg:col-span-5 flex flex-col">
+            <div className="relative flex-1 min-h-[280px] rounded-[10px] overflow-hidden ring-1 ring-white/10">
+              <Image
+                src={ai.clinicInterior}
+                alt="The Fortes Clinic consultation suite in Little Venice"
+                fill
+                unoptimized
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="mt-8 space-y-4 text-white/85 text-sm">
+              <Detail icon={MapPin} label="Clinic">{clinic.address}</Detail>
+              <Detail icon={Phone} label="Call">
+                <a href={clinic.phoneHref} className="font-heading font-black text-xl text-white hover:text-gold-light">
+                  {clinic.phone}
                 </a>
-              </div>
-              <div>
-                <span className="block text-(--rose) uppercase tracking-[0.24em] text-[0.65rem] font-bold mb-1">
-                  Email
-                </span>
-                <a href="mailto:hello@fortesclinic.co.uk" className="hover:text-(--rose)">
-                  hello@fortesclinic.co.uk
-                </a>
-              </div>
-              <div>
-                <span className="block text-(--rose) uppercase tracking-[0.24em] text-[0.65rem] font-bold mb-1">
-                  Hours
-                </span>
-                Mon–Fri 9:30am – 5:30pm
-                <br />
-                Sat 10:30am – 3:00pm · Sun closed
-              </div>
+              </Detail>
+              <Detail icon={Mail} label="Email">
+                <a href={`mailto:${clinic.email}`} className="hover:text-gold-light">{clinic.email}</a>
+              </Detail>
             </div>
           </div>
 
-          <div className="lg:col-span-7 bg-(--bg-cream) text-(--ink) p-8 lg:p-12">
-            {submitted ? (
-              <div className="text-center py-16">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-(--rose) flex items-center justify-center">
-                  <Check className="w-8 h-8 text-(--ink)" strokeWidth={3} />
-                </div>
-                <h3 className="h-display text-2xl mb-3">Thank you.</h3>
-                <p className="text-(--ink-soft)">
-                  Your request has been received. A member of the team will be in
-                  touch within one working day to arrange your consultation.
+          {/* Right: form card */}
+          <div className="lg:col-span-7">
+            <div className="bg-white text-ink rounded-[12px] p-7 lg:p-10 shadow-[var(--shadow-soft)]">
+              <div className="text-center mb-8">
+                <p className="eyebrow mb-3">Begin privately</p>
+                <h2 className="h-display text-[1.7rem] lg:text-[2.3rem] !leading-[1.12] text-ink">
+                  Request a Consultation with Dr Saeed
+                </h2>
+                <p className="text-gray text-sm mt-3 max-w-md mx-auto">
+                  A private, clinician-led conversation about your hair, your goals
+                  and the realistic outcomes available to you. There is never any
+                  pressure to proceed.
                 </p>
               </div>
-            ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSubmitted(true);
-                }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-5"
-              >
-                <Field label="First name" name="first" required />
-                <Field label="Last name" name="last" required />
-                <Field label="Phone" name="phone" type="tel" required />
-                <Field label="Email" name="email" type="email" required />
-                <Field
-                  label="How did you find us?"
-                  name="source"
-                  className="sm:col-span-2"
-                />
-                <label className="sm:col-span-2 flex flex-col gap-2">
-                  <span className="text-[0.7rem] uppercase tracking-[0.28em] font-bold text-(--muted)">
-                    Tell us about your hair
-                  </span>
-                  <textarea
-                    name="message"
-                    rows={5}
-                    className="bg-(--bg-cream-2) border border-(--line) focus:border-(--ink) focus:outline-none p-4 text-(--ink) resize-none"
-                  />
-                </label>
-                <p className="sm:col-span-2 text-xs text-(--muted) leading-relaxed">
-                  Your information is held in strict confidence and used only to
-                  arrange your private consultation. We never share, sell or send
-                  marketing on it.
-                </p>
-                <div className="sm:col-span-2">
-                  <button type="submit" className="cta-primary w-full sm:w-auto">
-                    Request Consultation
-                  </button>
+
+              {submitted ? (
+                <div className="text-center py-14">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[linear-gradient(45deg,#b28b45,#f1c77a)] flex items-center justify-center">
+                    <Check className="w-8 h-8 text-white" strokeWidth={3} />
+                  </div>
+                  <h3 className="h-display text-2xl text-ink mb-3">Thank You</h3>
+                  <p className="text-gray">
+                    Your request has been received. A member of the team will be in
+                    touch within one working day to arrange your consultation.
+                  </p>
                 </div>
-              </form>
-            )}
+              ) : (
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    setSubmitted(true);
+                  }}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                >
+                  <Field label="First name" name="first" required />
+                  <Field label="Last name" name="last" required />
+                  <Field label="Phone" name="phone" type="tel" required />
+                  <Field label="Email" name="email" type="email" required />
+                  <label className="sm:col-span-2 flex flex-col gap-2">
+                    <span className="text-[0.68rem] uppercase tracking-[0.18em] font-bold text-gray">
+                      How did you find us?
+                    </span>
+                    <select
+                      name="source"
+                      className="bg-bg-light border border-line rounded-[8px] focus:border-gold focus:outline-none p-3.5 text-ink"
+                      defaultValue=""
+                    >
+                      <option value="" disabled>Please select</option>
+                      <option>Google search</option>
+                      <option>Instagram or Facebook</option>
+                      <option>A friend or family member</option>
+                      <option>Press or an article</option>
+                      <option>Other</option>
+                    </select>
+                  </label>
+                  <label className="sm:col-span-2 flex flex-col gap-2">
+                    <span className="text-[0.68rem] uppercase tracking-[0.18em] font-bold text-gray">
+                      Tell us about your hair
+                    </span>
+                    <textarea
+                      name="message"
+                      rows={4}
+                      className="bg-bg-light border border-line rounded-[8px] focus:border-gold focus:outline-none p-3.5 text-ink resize-none"
+                    />
+                  </label>
+                  <p className="sm:col-span-2 text-xs text-gray-soft leading-relaxed">
+                    Your information is held in strict confidence and used only to
+                    arrange your private consultation. We never share, sell or send
+                    marketing on it.
+                  </p>
+                  <div className="sm:col-span-2">
+                    <button type="submit" className="btn btn-primary w-full">
+                      Request Consultation
+                    </button>
+                  </div>
+                </form>
+              )}
+            </div>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function Detail({
+  icon: Icon,
+  label,
+  children,
+}: {
+  icon: React.ElementType;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex items-start gap-3">
+      <Icon className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" strokeWidth={2} />
+      <div>
+        <span className="block text-gold-light uppercase tracking-[0.2em] text-[0.6rem] font-bold mb-0.5">
+          {label}
+        </span>
+        {children}
+      </div>
+    </div>
   );
 }
 
@@ -116,25 +149,23 @@ function Field({
   name,
   type = "text",
   required,
-  className = "",
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
-  className?: string;
 }) {
   return (
-    <label className={`flex flex-col gap-2 ${className}`}>
-      <span className="text-[0.7rem] uppercase tracking-[0.28em] font-bold text-(--muted)">
+    <label className="flex flex-col gap-2">
+      <span className="text-[0.68rem] uppercase tracking-[0.18em] font-bold text-gray">
         {label}
-        {required && <span className="text-(--rose-deep) ml-1">*</span>}
+        {required && <span className="text-gold ml-1">*</span>}
       </span>
       <input
         type={type}
         name={name}
         required={required}
-        className="bg-(--bg-cream-2) border border-(--line) focus:border-(--ink) focus:outline-none p-3.5 text-(--ink)"
+        className="bg-bg-light border border-line rounded-[8px] focus:border-gold focus:outline-none p-3.5 text-ink"
       />
     </label>
   );
