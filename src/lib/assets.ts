@@ -59,12 +59,14 @@ export const ai = {
   // Real photo from the client's Drive Assets folder: Dr Saeed with a female patient.
   drSaeedPatient: HFM + "ec55f01a-b9d7-45d4-af8b-260b23124aa5.png",
   womanHero: HF + "hf_20260630_233940_c0a518e1-6ef7-468d-8f44-f86155c21a79.png",
-  clinicInterior: HF + "hf_20260630_233942_1814ec02-7241-4fb1-99eb-beb7de66fd03.png",
+  // Real clinic interior photo from the client's Drive Assets folder.
+  clinicInterior: HFM + "6b9cb434-cabb-4da3-b119-3746bb8bdd7a.png",
   fueTechnique: HF + "hf_20260630_233944_1298a54c-01fd-4e3c-be94-be1581e71f60.png",
   densityCloseup: HF + "hf_20260630_233947_093447a4-a6d1-4f38-9a1a-b867410a1d86.png",
   patientSouthAsian: HF + "hf_20260630_233948_0f9bd282-6e09-4721-b19d-e622fe9fa6b1.png",
   patientBlonde: HF + "hf_20260630_233950_bf2f9fb4-8131-4a6f-9a9a-3379ecc9f470.png",
-  patientMature: HF + "hf_20260630_233952_db26bf91-a661-4e26-967d-061f2b6c499b.png",
+  // Real patient photo from the client's Drive Assets folder.
+  patientMature: HFM + "0de67916-94ad-46f3-b5de-6510b0644315.png",
   aftercare: HF + "hf_20260630_233954_41d85b4a-2d3c-4e73-ae7d-af1d50d22222.png",
   // Dr Saeed, generated with his real photo as a nano_banana_pro reference.
   drSaeedMeet: HF + "hf_20260701_010608_f6242f1c-4c75-43c4-8464-f7396b73b182.png",
