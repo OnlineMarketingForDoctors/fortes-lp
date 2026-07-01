@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import PressStrip from "@/components/PressStrip";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import EmotionalHook from "@/components/EmotionalHook";
 import Results from "@/components/Results";
@@ -23,7 +22,6 @@ export default function Home() {
       <FloatingCTA />
       <main>
         <Hero />
-        <PressStrip />
         <ReviewsCarousel />
         <SpinningDivider />
         <EmotionalHook />

@@ -3,7 +3,7 @@ import { ai } from "@/lib/assets";
 
 export default function EmotionalHook() {
   return (
-    <section className="bg-slate lattice text-white py-20 lg:py-28 overflow-hidden">
+    <section className="bg-brand-dark py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">

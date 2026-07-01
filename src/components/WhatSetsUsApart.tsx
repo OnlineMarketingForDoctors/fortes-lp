@@ -27,7 +27,7 @@ const points = [
 
 export default function WhatSetsUsApart() {
   return (
-    <section id="why" className="bg-charcoal lattice text-white py-20 lg:py-28 overflow-hidden">
+    <section id="why" className="bg-brand-dark py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Collage */}

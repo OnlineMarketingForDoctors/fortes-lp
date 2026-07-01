@@ -174,6 +174,33 @@ body {
   background: var(--color-line);
 }
 
+/* Brand woven-texture background for every dark section, with a gradient
+   overlay so white text keeps strong contrast. */
+.bg-brand-dark {
+  position: relative;
+  background-color: #2b3034;
+  background-image: url("/assets/branding/back-4.png");
+  background-size: 860px auto;
+  background-repeat: repeat;
+  color: #fff;
+}
+.bg-brand-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 16, 18, 0.42) 0%,
+    rgba(14, 16, 18, 0.62) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-brand-dark > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* Spinning brand monogram used at section junctions */
 .spin-slow {
   animation: spin-slow 20s linear infinite;

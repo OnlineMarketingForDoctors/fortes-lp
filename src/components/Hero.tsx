@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { Check } from "lucide-react";
-import { video } from "@/lib/assets";
+import { video, mediaLogos } from "@/lib/assets";
 
 const bullets = [
   "No full head shave — discreet FUE & FUT techniques keep your length",
@@ -66,6 +67,26 @@ export default function Hero() {
             <a href="#results" className="btn-text !text-white hover:!text-gold-light">
               See Real Results →
             </a>
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-white/15">
+            <p className="text-[0.62rem] uppercase tracking-[0.28em] text-white/55 mb-5">
+              As featured in &amp; awarded
+            </p>
+            <ul className="flex flex-wrap items-center gap-x-10 gap-y-5">
+              {mediaLogos.map((m, i) => (
+                <li key={i} className="relative h-8 lg:h-9 w-28 lg:w-32 opacity-80 hover:opacity-100 transition-opacity">
+                  <Image
+                    src={m.src}
+                    alt={m.alt}
+                    fill
+                    unoptimized
+                    sizes="140px"
+                    className="object-contain object-left [filter:brightness(0)_invert(1)]"
+                  />
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
