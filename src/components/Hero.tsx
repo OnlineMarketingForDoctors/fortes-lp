@@ -82,7 +82,7 @@ export default function Hero() {
                     width={200}
                     height={80}
                     unoptimized
-                    className="h-12 lg:h-14 w-auto object-contain [filter:brightness(0)_invert(1)]"
+                    className="h-16 lg:h-20 w-auto object-contain [filter:brightness(0)_invert(1)]"
                   />
                 </li>
               ))}

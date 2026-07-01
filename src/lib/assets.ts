@@ -79,7 +79,7 @@ export const clinic = {
   phone: "020 3962 0303",
   phoneHref: "tel:+442039620303",
   email: "hello@fortesclinic.co.uk",
-  whatsapp: "https://wa.me/442039620303",
+  whatsapp: "https://wa.me/+447561422719",
   address: "22 Clifton Road, Little Venice, London W9 1ST",
   reviewsUrl: "https://maps.app.goo.gl/r5RWkVwTsqsCDrK56",
   rating: "4.8",

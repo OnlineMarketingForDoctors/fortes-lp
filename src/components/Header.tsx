@@ -81,8 +81,8 @@ export default function Header() {
         </div>
 
         {/* Mobile */}
-        <div className={`flex lg:hidden items-center justify-between transition-all duration-300 ${solid ? "h-[68px]" : "h-20"}`}>
-          <a href="#" aria-label="Fortes Clinic" className="flex items-center">
+        <div className={`grid lg:hidden grid-cols-[1fr_auto_1fr] items-center transition-all duration-300 ${solid ? "h-[68px]" : "h-20"}`}>
+          <a href="#" aria-label="Fortes Clinic" className="flex items-center min-w-0 justify-self-start">
             <Image
               src={logos.fortes}
               alt="Fortes Clinic"
@@ -90,13 +90,20 @@ export default function Header() {
               height={64}
               priority
               unoptimized
-              className={`w-auto ${solid ? "h-10" : "h-12"} ${solid ? "" : "brightness-0 invert"}`}
+              className={`w-auto max-w-full ${solid ? "h-9" : "h-10"} ${solid ? "" : "brightness-0 invert"}`}
             />
           </a>
-          <div className="flex items-center gap-3">
-            <a href={clinic.phoneHref} aria-label="Call" className="flex items-center gap-1.5">
-              <Phone className="h-5 w-5 text-gold" strokeWidth={2.4} />
-              <span className={`font-heading font-black text-base ${linkColor}`}>{clinic.phone}</span>
+
+          <a
+            href="#consult"
+            className="btn btn-primary justify-self-center whitespace-nowrap !py-2.5 !px-5 text-[0.72rem]"
+          >
+            Book Now
+          </a>
+
+          <div className="flex items-center gap-3 justify-self-end">
+            <a href={clinic.phoneHref} aria-label="Call us" className="flex items-center">
+              <Phone className="h-6 w-6 text-gold" strokeWidth={2.4} />
             </a>
             <button type="button" onClick={() => setOpen((v) => !v)} aria-label="Menu" className={linkColor}>
               {open ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}

@@ -13,6 +13,7 @@ import Aftercare from "@/components/Aftercare";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { SpinningDivider } from "@/components/SpinningBadge";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
     <>
       <Header />
       <FloatingCTA />
+      <WhatsAppButton />
       <main>
         <Hero />
         <ReviewsCarousel />
