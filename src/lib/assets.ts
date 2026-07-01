@@ -79,7 +79,7 @@ export const ai = {
   drSaeedConsult: HFM + "cdebaa89-0690-4445-9f30-00707de51631.png",
   clinicTreatment: HF + "hf_20260701_005238_d0844102-79d0-4bf2-af5a-0c2ef99e3de8.png",
   // Real clinic room photo from the client's Drive Assets folder.
-  clinicRoom: HFM + "259830af-1072-4ac1-97a7-1b6d0b518bf6.png",
+  clinicRoom: HFM + "a661cdf3-f743-4b44-b76d-3d9263225b2b.png",
 };
 
 export const clinic = {
