@@ -21,7 +21,7 @@ export default function ContactForm() {
                 fill
                 unoptimized
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover object-right"
+                className="object-cover object-center"
               />
             </div>
             <div className="mt-8 space-y-4 text-ink/80 text-sm">
