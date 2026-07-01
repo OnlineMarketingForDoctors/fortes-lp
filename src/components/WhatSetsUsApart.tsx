@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Award, UserCheck, Scissors, HeartHandshake } from "lucide-react";
-import { ai, doctor } from "@/lib/assets";
+import { ai } from "@/lib/assets";
 
 const points = [
   {
@@ -34,16 +34,16 @@ export default function WhatSetsUsApart() {
           <div className="lg:col-span-6">
             <div className="relative grid grid-cols-2 gap-4">
               <div className="relative aspect-[4/5] rounded-[10px] overflow-hidden shadow-[var(--shadow-soft)] ring-1 ring-white/10 mt-10">
-                <Image src={ai.womanHero} alt="A confident woman with restored hair" fill unoptimized sizes="22vw" className="object-cover" />
+                <Image src={ai.drSaeedPortrait} alt="Dr Ahmad Saeed at Fortes Clinic" fill unoptimized sizes="22vw" className="object-cover" />
               </div>
               <div className="relative aspect-[4/5] rounded-[10px] overflow-hidden shadow-[var(--shadow-soft)] ring-1 ring-white/10">
-                <Image src={doctor.saeed} alt="Dr Ahmad Saeed" fill unoptimized sizes="22vw" className="object-cover object-top" />
+                <Image src={ai.clinicRoom} alt="The Fortes Clinic consultation room in Little Venice" fill unoptimized sizes="22vw" className="object-cover" />
               </div>
               <div className="relative aspect-[4/5] rounded-[10px] overflow-hidden shadow-[var(--shadow-soft)] ring-1 ring-white/10">
-                <Image src={ai.fueTechnique} alt="Precision FUE hair restoration" fill unoptimized sizes="22vw" className="object-cover" />
+                <Image src={ai.clinicTreatment} alt="Trichology consultation at Fortes Clinic" fill unoptimized sizes="22vw" className="object-cover" />
               </div>
               <div className="relative aspect-[4/5] rounded-[10px] overflow-hidden shadow-[var(--shadow-soft)] ring-1 ring-white/10 -mt-10">
-                <Image src={ai.clinicInterior} alt="The Fortes Clinic in Little Venice" fill unoptimized sizes="22vw" className="object-cover" />
+                <Image src={ai.drSaeedConsult} alt="Dr Ahmad Saeed consulting with a patient" fill unoptimized sizes="22vw" className="object-cover" />
               </div>
             </div>
           </div>

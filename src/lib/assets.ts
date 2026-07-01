@@ -59,6 +59,11 @@ export const ai = {
   patientBlonde: HF + "hf_20260630_233950_bf2f9fb4-8131-4a6f-9a9a-3379ecc9f470.png",
   patientMature: HF + "hf_20260630_233952_db26bf91-a661-4e26-967d-061f2b6c499b.png",
   aftercare: HF + "hf_20260630_233954_41d85b4a-2d3c-4e73-ae7d-af1d50d22222.png",
+  // Dr Saeed, generated with his real photo as a nano_banana_pro reference.
+  drSaeedPortrait: HF + "hf_20260701_005231_f782ab18-7f6a-4512-bd66-cfe77ba86743.png",
+  drSaeedConsult: HF + "hf_20260701_005235_78754c24-ddbf-4332-901f-4bbe8fb6f4c2.png",
+  clinicTreatment: HF + "hf_20260701_005238_d0844102-79d0-4bf2-af5a-0c2ef99e3de8.png",
+  clinicRoom: HF + "hf_20260701_005242_25360448-1e39-412f-b895-36f2ca61f9ec.png",
 };
 
 export const clinic = {
