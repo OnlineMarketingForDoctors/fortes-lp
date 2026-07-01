@@ -49,14 +49,15 @@ export default function MeetDoctor() {
           </div>
 
           <div className="lg:col-span-6 order-1 lg:order-2">
-            <div className="relative aspect-[4/5] sm:aspect-[5/5] w-full max-w-md mx-auto overflow-hidden rounded-[10px]">
+            <div className="w-full max-w-md mx-auto overflow-hidden rounded-[10px]">
               <Image
                 src={ai.drSaeedMeet}
                 alt="Dr Ahmad Saeed, Founder and Lead Practitioner at Fortes Clinic"
-                fill
+                width={0}
+                height={0}
                 unoptimized
                 sizes="(min-width: 1024px) 45vw, 100vw"
-                className="object-cover object-top"
+                className="w-full h-auto"
                 priority
               />
             </div>
