@@ -1,13 +1,9 @@
-"use client";
-
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Script from "next/script";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { ai, clinic } from "@/lib/assets";
 
 export default function ContactForm() {
-  const router = useRouter();
-
   return (
     <section id="consult" className="bg-cream py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
@@ -52,55 +48,24 @@ export default function ContactForm() {
                 </p>
               </div>
 
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  router.push("/thank-you-enquiry");
-                }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-              >
-                  <Field label="First name" name="first" required />
-                  <Field label="Last name" name="last" required />
-                  <Field label="Phone" name="phone" type="tel" required />
-                  <Field label="Email" name="email" type="email" required />
-                  <label className="sm:col-span-2 flex flex-col gap-2">
-                    <span className="text-[0.68rem] uppercase tracking-[0.18em] font-bold text-gray">
-                      How did you find us?
-                    </span>
-                    <select
-                      name="source"
-                      className="bg-bg-light border border-line rounded-[8px] focus:border-gold focus:outline-none p-3.5 text-ink"
-                      defaultValue=""
-                    >
-                      <option value="" disabled>Please select</option>
-                      <option>Google search</option>
-                      <option>Instagram or Facebook</option>
-                      <option>A friend or family member</option>
-                      <option>Press or an article</option>
-                      <option>Other</option>
-                    </select>
-                  </label>
-                  <label className="sm:col-span-2 flex flex-col gap-2">
-                    <span className="text-[0.68rem] uppercase tracking-[0.18em] font-bold text-gray">
-                      Tell us about your hair
-                    </span>
-                    <textarea
-                      name="message"
-                      rows={4}
-                      className="bg-bg-light border border-line rounded-[8px] focus:border-gold focus:outline-none p-3.5 text-ink resize-none"
-                    />
-                  </label>
-                  <p className="sm:col-span-2 text-xs text-gray-soft leading-relaxed">
-                    Your information is held in strict confidence and used only to
-                    arrange your private consultation. We never share, sell or send
-                    marketing on it.
-                  </p>
-                  <div className="sm:col-span-2">
-                    <button type="submit" className="btn btn-primary w-full">
-                      Request Consultation
-                    </button>
-                  </div>
-                </form>
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/ion7XMiW9PV0kjAZFkEH"
+                style={{ width: "100%", height: "685px", border: "none", borderRadius: "0px" }}
+                id="inline-ion7XMiW9PV0kjAZFkEH"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="LP Form (Female)"
+                data-height="600"
+                data-layout-iframe-id="inline-ion7XMiW9PV0kjAZFkEH"
+                data-form-id="ion7XMiW9PV0kjAZFkEH"
+                title="LP Form (Female)"
+              />
+              <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
             </div>
           </div>
         </div>
@@ -131,29 +96,3 @@ function Detail({
   );
 }
 
-function Field({
-  label,
-  name,
-  type = "text",
-  required,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <label className="flex flex-col gap-2">
-      <span className="text-[0.68rem] uppercase tracking-[0.18em] font-bold text-gray">
-        {label}
-        {required && <span className="text-gold ml-1">*</span>}
-      </span>
-      <input
-        type={type}
-        name={name}
-        required={required}
-        className="bg-bg-light border border-line rounded-[8px] focus:border-gold focus:outline-none p-3.5 text-ink"
-      />
-    </label>
-  );
-}
