@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { doctor } from "@/lib/assets";
+import { ai } from "@/lib/assets";
 
 const credentials = [
   "MBChB Medicine & Surgery, 1997",
@@ -51,7 +51,7 @@ export default function MeetDoctor() {
           <div className="lg:col-span-6 order-1 lg:order-2">
             <div className="relative aspect-[4/5] sm:aspect-[5/5] w-full max-w-md mx-auto overflow-hidden rounded-[10px]">
               <Image
-                src={doctor.saeed}
+                src={ai.drSaeedMeet}
                 alt="Dr Ahmad Saeed, Founder and Lead Practitioner at Fortes Clinic"
                 fill
                 unoptimized
