@@ -74,7 +74,7 @@ export const ai = {
   // Real photo of Dr Saeed from the client's Drive Assets folder.
   drSaeedMeet: HFM + "41806cab-83a6-4857-8e2f-b48be61a8b4c.png",
   drSaeedWash: HF + "hf_20260701_012804_5c1745e7-bfa9-4a2a-8a80-821816e645a5.png",
-  drSaeedPortrait: HF + "hf_20260701_005231_f782ab18-7f6a-4512-bd66-cfe77ba86743.png",
+  drSaeedPortrait: HFM + "41806cab-83a6-4857-8e2f-b48be61a8b4c.png",
   // Real photo of Dr Saeed consulting a patient (client's Drive Assets folder).
   drSaeedConsult: HFM + "cdebaa89-0690-4445-9f30-00707de51631.png",
   clinicTreatment: HF + "hf_20260701_005238_d0844102-79d0-4bf2-af5a-0c2ef99e3de8.png",
