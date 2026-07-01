@@ -6,6 +6,11 @@
 const HF =
   "https://d8j0ntlcm91z4.cloudfront.net/user_3Ary2g06ZSWzxFoVWIP644Wm9ZG/";
 
+// Real photographs imported from the client's Drive "Assets" folder into
+// Higgsfield media storage (served publicly from its CDN).
+const HFM =
+  "https://d2ol7oe51mr4n9.cloudfront.net/user_3Ary2g06ZSWzxFoVWIP644Wm9ZG/";
+
 export const logos = {
   fortes: "/assets/logos/fortes-clinic-logo.png",
   spinning: "/assets/logos/spinning-logo.png",
@@ -50,7 +55,8 @@ export const mediaLogos = [
 
 // AI imagery (Higgsfield nano_banana_pro) — detailed, skin-texture-realistic.
 export const ai = {
-  emotionalHook: HF + "hf_20260630_233936_21e9f321-67a4-46f5-b8c3-e1271628afb1.png",
+  // Real photo from the client's Drive Assets folder (woman touching her hair).
+  emotionalHook: HFM + "ec55f01a-b9d7-45d4-af8b-260b23124aa5.png",
   womanHero: HF + "hf_20260630_233940_c0a518e1-6ef7-468d-8f44-f86155c21a79.png",
   clinicInterior: HF + "hf_20260630_233942_1814ec02-7241-4fb1-99eb-beb7de66fd03.png",
   fueTechnique: HF + "hf_20260630_233944_1298a54c-01fd-4e3c-be94-be1581e71f60.png",
@@ -64,7 +70,8 @@ export const ai = {
   drSaeedPortrait: HF + "hf_20260701_005231_f782ab18-7f6a-4512-bd66-cfe77ba86743.png",
   drSaeedConsult: HF + "hf_20260701_005235_78754c24-ddbf-4332-901f-4bbe8fb6f4c2.png",
   clinicTreatment: HF + "hf_20260701_005238_d0844102-79d0-4bf2-af5a-0c2ef99e3de8.png",
-  clinicRoom: HF + "hf_20260701_005242_25360448-1e39-412f-b895-36f2ca61f9ec.png",
+  // Real clinic room photo from the client's Drive Assets folder.
+  clinicRoom: HFM + "259830af-1072-4ac1-97a7-1b6d0b518bf6.png",
 };
 
 export const clinic = {
