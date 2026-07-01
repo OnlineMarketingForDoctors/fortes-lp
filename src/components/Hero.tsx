@@ -73,16 +73,16 @@ export default function Hero() {
             <p className="text-[0.62rem] uppercase tracking-[0.28em] text-white/55 mb-5">
               As featured in &amp; awarded
             </p>
-            <ul className="flex flex-wrap items-center gap-x-10 gap-y-5">
+            <ul className="flex flex-wrap items-center gap-x-6 lg:gap-x-8 gap-y-5">
               {mediaLogos.map((m, i) => (
-                <li key={i} className="relative h-8 lg:h-9 w-28 lg:w-32 opacity-80 hover:opacity-100 transition-opacity">
+                <li key={i} className="opacity-85 hover:opacity-100 transition-opacity">
                   <Image
                     src={m.src}
                     alt={m.alt}
-                    fill
+                    width={200}
+                    height={80}
                     unoptimized
-                    sizes="140px"
-                    className="object-contain object-left [filter:brightness(0)_invert(1)]"
+                    className="h-12 lg:h-14 w-auto object-contain [filter:brightness(0)_invert(1)]"
                   />
                 </li>
               ))}
