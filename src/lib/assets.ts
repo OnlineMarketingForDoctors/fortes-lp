@@ -62,7 +62,7 @@ export const ai = {
   // Real clinic interior photo from the client's Drive Assets folder.
   clinicInterior: HFM + "6b9cb434-cabb-4da3-b119-3746bb8bdd7a.png",
   // Real clinic room photo (Drive) used on the consultation form.
-  contactRoom: HFM + "259830af-1072-4ac1-97a7-1b6d0b518bf6.png",
+  contactRoom: HFM + "cde692b6-040c-4428-a74b-95055053c50d.png",
   fueTechnique: HF + "hf_20260630_233944_1298a54c-01fd-4e3c-be94-be1581e71f60.png",
   densityCloseup: HF + "hf_20260630_233947_093447a4-a6d1-4f38-9a1a-b867410a1d86.png",
   patientSouthAsian: HF + "hf_20260630_233948_0f9bd282-6e09-4721-b19d-e622fe9fa6b1.png",
