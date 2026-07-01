@@ -71,7 +71,8 @@ export const ai = {
   patientMature: HFM + "0de67916-94ad-46f3-b5de-6510b0644315.png",
   aftercare: HF + "hf_20260630_233954_41d85b4a-2d3c-4e73-ae7d-af1d50d22222.png",
   // Dr Saeed, generated with his real photo as a nano_banana_pro reference.
-  drSaeedMeet: HF + "hf_20260701_010608_f6242f1c-4c75-43c4-8464-f7396b73b182.png",
+  // Real photo of Dr Saeed from the client's Drive Assets folder.
+  drSaeedMeet: HFM + "41806cab-83a6-4857-8e2f-b48be61a8b4c.png",
   drSaeedWash: HF + "hf_20260701_012804_5c1745e7-bfa9-4a2a-8a80-821816e645a5.png",
   drSaeedPortrait: HF + "hf_20260701_005231_f782ab18-7f6a-4512-bd66-cfe77ba86743.png",
   drSaeedConsult: HF + "hf_20260701_005235_78754c24-ddbf-4332-901f-4bbe8fb6f4c2.png",
