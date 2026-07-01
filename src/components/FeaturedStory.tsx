@@ -10,8 +10,8 @@ export default function FeaturedStory() {
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] rounded-[10px] overflow-hidden shadow-[var(--shadow-soft)]">
               <Image
-                src={ai.aftercare}
-                alt="A woman enjoying her restored, healthy hair"
+                src={ai.drSaeedPatient}
+                alt="Dr Ahmad Saeed with a female patient at Fortes Clinic"
                 fill
                 unoptimized
                 sizes="(min-width: 1024px) 40vw, 100vw"

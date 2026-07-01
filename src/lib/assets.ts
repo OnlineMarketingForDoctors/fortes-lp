@@ -55,8 +55,9 @@ export const mediaLogos = [
 
 // AI imagery (Higgsfield nano_banana_pro) — detailed, skin-texture-realistic.
 export const ai = {
-  // Real photo from the client's Drive Assets folder (woman touching her hair).
-  emotionalHook: HFM + "ec55f01a-b9d7-45d4-af8b-260b23124aa5.png",
+  emotionalHook: HF + "hf_20260630_233936_21e9f321-67a4-46f5-b8c3-e1271628afb1.png",
+  // Real photo from the client's Drive Assets folder: Dr Saeed with a female patient.
+  drSaeedPatient: HFM + "ec55f01a-b9d7-45d4-af8b-260b23124aa5.png",
   womanHero: HF + "hf_20260630_233940_c0a518e1-6ef7-468d-8f44-f86155c21a79.png",
   clinicInterior: HF + "hf_20260630_233942_1814ec02-7241-4fb1-99eb-beb7de66fd03.png",
   fueTechnique: HF + "hf_20260630_233944_1298a54c-01fd-4e3c-be94-be1581e71f60.png",

@@ -43,7 +43,7 @@ export default function EmotionalHook() {
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[10px] shadow-[var(--shadow-soft)] ring-1 ring-white/10">
               <Image
                 src={ai.emotionalHook}
-                alt="A woman gently running her fingers through her hair"
+                alt="A woman noticing her widening parting in the mirror"
                 fill
                 unoptimized
                 sizes="(min-width: 1024px) 40vw, 100vw"
