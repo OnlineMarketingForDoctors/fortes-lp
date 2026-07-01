@@ -115,7 +115,7 @@ export default function ReviewsCarousel() {
         </div>
 
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex items-start gap-6 -ml-6">
+          <div className="flex gap-6 -ml-6">
             {reviews.map((r, i) => (
               <article key={i} className="flex-[0_0_88%] sm:flex-[0_0_46%] lg:flex-[0_0_32%] pl-6">
                 <ReviewCard review={r} />
@@ -154,7 +154,7 @@ function ReviewCard({ review: r }: { review: Review }) {
   const isLong = r.body.length > 170;
 
   return (
-    <div className="bg-bg-lighter border border-line rounded-[10px] p-7 flex flex-col shadow-[var(--shadow-soft)]">
+    <div className="bg-bg-lighter border border-line rounded-[10px] p-7 h-full flex flex-col shadow-[var(--shadow-soft)]">
       <div className="flex items-center gap-3 mb-4">
         <div className={`w-11 h-11 rounded-full flex items-center justify-center font-bold ${r.color}`}>
           {r.initial}
@@ -177,6 +177,7 @@ function ReviewCard({ review: r }: { review: Review }) {
       >
         “{r.body}”
       </p>
+      <span className="flex-1" aria-hidden="true" />
       {isLong && (
         <button
           type="button"
