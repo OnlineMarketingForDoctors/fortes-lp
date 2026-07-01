@@ -115,27 +115,10 @@ export default function ReviewsCarousel() {
         </div>
 
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-6 -ml-6">
+          <div className="flex items-start gap-6 -ml-6">
             {reviews.map((r, i) => (
               <article key={i} className="flex-[0_0_88%] sm:flex-[0_0_46%] lg:flex-[0_0_32%] pl-6">
-                <div className="bg-bg-lighter border border-line rounded-[10px] p-7 h-full flex flex-col shadow-[var(--shadow-soft)]">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-11 h-11 rounded-full flex items-center justify-center font-bold ${r.color}`}>
-                      {r.initial}
-                    </div>
-                    <div className="flex-1">
-                      <div className="font-semibold text-ink text-sm">{r.name}</div>
-                      <div className="text-xs text-gray-soft">{r.date}</div>
-                    </div>
-                    <GoogleG />
-                  </div>
-                  <div className="flex mb-3">
-                    {Array.from({ length: 5 }).map((_, s) => (
-                      <Star key={s} className="w-4 h-4 fill-gold-bright text-gold-bright" />
-                    ))}
-                  </div>
-                  <p className="text-[0.93rem] leading-relaxed text-gray-mid flex-1">“{r.body}”</p>
-                </div>
+                <ReviewCard review={r} />
               </article>
             ))}
           </div>
@@ -163,6 +146,47 @@ export default function ReviewsCarousel() {
         </div>
       </div>
     </section>
+  );
+}
+
+function ReviewCard({ review: r }: { review: Review }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = r.body.length > 170;
+
+  return (
+    <div className="bg-bg-lighter border border-line rounded-[10px] p-7 flex flex-col shadow-[var(--shadow-soft)]">
+      <div className="flex items-center gap-3 mb-4">
+        <div className={`w-11 h-11 rounded-full flex items-center justify-center font-bold ${r.color}`}>
+          {r.initial}
+        </div>
+        <div className="flex-1">
+          <div className="font-semibold text-ink text-sm">{r.name}</div>
+          <div className="text-xs text-gray-soft">{r.date}</div>
+        </div>
+        <GoogleG />
+      </div>
+      <div className="flex mb-3">
+        {Array.from({ length: 5 }).map((_, s) => (
+          <Star key={s} className="w-4 h-4 fill-gold-bright text-gold-bright" />
+        ))}
+      </div>
+      <p
+        className={`text-[0.93rem] leading-relaxed text-gray-mid ${
+          !expanded && isLong ? "line-clamp-4" : ""
+        }`}
+      >
+        “{r.body}”
+      </p>
+      {isLong && (
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          className="mt-3 self-start text-[0.72rem] font-ui font-bold uppercase tracking-[0.14em] text-gold hover:text-gold-light transition-colors"
+        >
+          {expanded ? "Read less" : "Read more"}
+        </button>
+      )}
+    </div>
   );
 }
 
