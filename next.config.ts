@@ -20,6 +20,12 @@ const nextConfig: NextConfig = {
         destination: "/female-hair-transplant",
         permanent: true,
       },
+      // The thank-you page moved to /thank-you-enquiry/.
+      {
+        source: "/thank-you",
+        destination: "/thank-you-enquiry",
+        permanent: true,
+      },
     ];
   },
 };

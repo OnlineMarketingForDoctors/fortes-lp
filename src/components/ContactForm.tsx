@@ -55,7 +55,7 @@ export default function ContactForm() {
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
-                  router.push("/thank-you");
+                  router.push("/thank-you-enquiry");
                 }}
                 className="grid grid-cols-1 sm:grid-cols-2 gap-4"
               >
