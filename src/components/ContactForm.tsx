@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { Check, Phone, Mail, MapPin } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { ai, clinic } from "@/lib/assets";
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
 
   return (
     <section id="consult" className="bg-cream py-20 lg:py-28 overflow-hidden">
@@ -52,25 +52,13 @@ export default function ContactForm() {
                 </p>
               </div>
 
-              {submitted ? (
-                <div className="text-center py-14">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[linear-gradient(45deg,#b28b45,#f1c77a)] flex items-center justify-center">
-                    <Check className="w-8 h-8 text-white" strokeWidth={3} />
-                  </div>
-                  <h3 className="h-display text-2xl text-ink mb-3">Thank You</h3>
-                  <p className="text-gray">
-                    Your request has been received. A member of the team will be in
-                    touch within one working day to arrange your consultation.
-                  </p>
-                </div>
-              ) : (
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setSubmitted(true);
-                  }}
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-                >
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  router.push("/thank-you");
+                }}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              >
                   <Field label="First name" name="first" required />
                   <Field label="Last name" name="last" required />
                   <Field label="Phone" name="phone" type="tel" required />
@@ -113,7 +101,6 @@ export default function ContactForm() {
                     </button>
                   </div>
                 </form>
-              )}
             </div>
           </div>
         </div>
