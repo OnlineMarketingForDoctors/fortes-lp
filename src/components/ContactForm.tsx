@@ -9,12 +9,12 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="consult" className="bg-brand-dark py-20 lg:py-28 overflow-hidden">
+    <section id="consult" className="bg-cream py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
           {/* Left: image + details */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="relative flex-1 min-h-[280px] rounded-[10px] overflow-hidden ring-1 ring-white/10">
+            <div className="relative flex-1 min-h-[280px] rounded-[10px] overflow-hidden ring-1 ring-black/5">
               <Image
                 src={ai.clinicInterior}
                 alt="The Fortes Clinic consultation suite in Little Venice"
@@ -24,15 +24,15 @@ export default function ContactForm() {
                 className="object-cover"
               />
             </div>
-            <div className="mt-8 space-y-4 text-white/85 text-sm">
+            <div className="mt-8 space-y-4 text-ink/80 text-sm">
               <Detail icon={MapPin} label="Clinic">{clinic.address}</Detail>
               <Detail icon={Phone} label="Call">
-                <a href={clinic.phoneHref} className="font-heading font-black text-xl text-white hover:text-gold-light">
+                <a href={clinic.phoneHref} className="font-heading font-black text-xl text-ink hover:text-gold">
                   {clinic.phone}
                 </a>
               </Detail>
               <Detail icon={Mail} label="Email">
-                <a href={`mailto:${clinic.email}`} className="hover:text-gold-light">{clinic.email}</a>
+                <a href={`mailto:${clinic.email}`} className="hover:text-gold">{clinic.email}</a>
               </Detail>
             </div>
           </div>
@@ -135,7 +135,7 @@ function Detail({
     <div className="flex items-start gap-3">
       <Icon className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" strokeWidth={2} />
       <div>
-        <span className="block text-gold-light uppercase tracking-[0.2em] text-[0.6rem] font-bold mb-0.5">
+        <span className="block text-gold uppercase tracking-[0.2em] text-[0.6rem] font-bold mb-0.5">
           {label}
         </span>
         {children}

@@ -4,7 +4,7 @@ import { logos, clinic } from "@/lib/assets";
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark text-white/70">
+    <footer className="bg-charcoal text-white/70">
       {/* Map */}
       <div className="w-full h-[320px] lg:h-[380px]">
         <iframe
