@@ -144,9 +144,10 @@ body {
 .nav-link {
   font-family: var(--font-ui);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   font-weight: 700;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
+  white-space: nowrap;
 }
 
 /* Lattice / brand watermark on dark sections */
@@ -171,6 +172,21 @@ body {
 .divider-line {
   height: 1px;
   background: var(--color-line);
+}
+
+/* Spinning brand monogram used at section junctions */
+.spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spin-slow {
+    animation: none;
+  }
 }
 
 @media (max-width: 1024px) {

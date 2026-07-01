@@ -43,7 +43,6 @@ export const accreditations = [
 
 // Real press / award marks for the trust strip.
 export const mediaLogos = [
-  { src: "/assets/media-logos/hero-slide1.png", alt: "Strive for Perfection Award" },
   { src: "/assets/media-logos/press-2.png", alt: "Daily Mail" },
   { src: "/assets/media-logos/press-3.png", alt: "LDN Fashion" },
   { src: "/assets/media-logos/press-4.png", alt: "The Guardian" },

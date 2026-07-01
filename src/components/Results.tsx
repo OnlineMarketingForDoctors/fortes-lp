@@ -101,6 +101,11 @@ export default function Results() {
         <p className="heading-sans text-lg lg:text-xl text-ink text-center max-w-2xl mx-auto mt-8">
           Take the first step towards feeling completely yourself again.
         </p>
+        <div className="text-center mt-8">
+          <a href="#consult" className="btn btn-primary">
+            Book Your Free Consultation
+          </a>
+        </div>
       </div>
     </section>
   );

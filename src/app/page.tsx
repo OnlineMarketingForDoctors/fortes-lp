@@ -13,22 +13,29 @@ import Process from "@/components/Process";
 import Aftercare from "@/components/Aftercare";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
+import { SpinningDivider } from "@/components/SpinningBadge";
 
 export default function Home() {
   return (
     <>
       <Header />
+      <FloatingCTA />
       <main>
         <Hero />
         <PressStrip />
         <ReviewsCarousel />
+        <SpinningDivider />
         <EmotionalHook />
         <Results />
+        <SpinningDivider />
         <WhatSetsUsApart />
         <WhyChoose />
+        <SpinningDivider />
         <FeaturedStory />
         <SocialProof />
         <MeetDoctor />
+        <SpinningDivider />
         <Process />
         <Aftercare />
         <ContactForm />

@@ -8,11 +8,11 @@ export default function PressStrip() {
         <p className="text-center eyebrow !text-gold-light mb-7">
           As featured in &amp; awarded
         </p>
-        <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 lg:gap-x-16">
+        <ul className="flex flex-wrap items-center justify-center gap-x-14 gap-y-8 lg:gap-x-24">
           {mediaLogos.map((m, i) => (
             <li
               key={i}
-              className="relative h-9 lg:h-11 w-24 lg:w-36 opacity-75 hover:opacity-100 transition-opacity"
+              className="relative h-14 lg:h-[4.5rem] w-40 lg:w-56 opacity-80 hover:opacity-100 transition-opacity"
             >
               <Image
                 src={m.src}
