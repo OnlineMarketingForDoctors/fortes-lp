@@ -16,7 +16,7 @@ export default function ContactForm() {
           <div className="lg:col-span-5 flex flex-col">
             <div className="relative flex-1 min-h-[280px] rounded-[10px] overflow-hidden ring-1 ring-black/5">
               <Image
-                src={ai.clinicInterior}
+                src={ai.contactRoom}
                 alt="The Fortes Clinic consultation suite in Little Venice"
                 fill
                 unoptimized

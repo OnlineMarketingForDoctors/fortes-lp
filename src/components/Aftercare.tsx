@@ -42,7 +42,7 @@ export default function Aftercare() {
           <div className="lg:col-span-6">
             <div className="grid grid-cols-2 gap-4">
               <div className="relative aspect-[3/4] rounded-[10px] overflow-hidden ring-1 ring-white/10 shadow-[var(--shadow-soft)] mt-8">
-                <Image src={ai.densityCloseup} alt="Healthy, dense restored hair" fill unoptimized sizes="22vw" className="object-cover" />
+                <Image src={ai.drSaeedWash} alt="Dr Ahmad Saeed washing a female patient's hair in clinic" fill unoptimized sizes="22vw" className="object-cover" />
               </div>
               <div className="relative aspect-[3/4] rounded-[10px] overflow-hidden ring-1 ring-white/10 shadow-[var(--shadow-soft)]">
                 <Image src={ai.patientMature} alt="A patient one year after her transplant" fill unoptimized sizes="22vw" className="object-cover" />

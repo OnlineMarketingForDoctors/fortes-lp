@@ -61,6 +61,8 @@ export const ai = {
   womanHero: HF + "hf_20260630_233940_c0a518e1-6ef7-468d-8f44-f86155c21a79.png",
   // Real clinic interior photo from the client's Drive Assets folder.
   clinicInterior: HFM + "6b9cb434-cabb-4da3-b119-3746bb8bdd7a.png",
+  // Real clinic room photo (Drive) used on the consultation form.
+  contactRoom: HFM + "259830af-1072-4ac1-97a7-1b6d0b518bf6.png",
   fueTechnique: HF + "hf_20260630_233944_1298a54c-01fd-4e3c-be94-be1581e71f60.png",
   densityCloseup: HF + "hf_20260630_233947_093447a4-a6d1-4f38-9a1a-b867410a1d86.png",
   patientSouthAsian: HF + "hf_20260630_233948_0f9bd282-6e09-4721-b19d-e622fe9fa6b1.png",
@@ -70,6 +72,7 @@ export const ai = {
   aftercare: HF + "hf_20260630_233954_41d85b4a-2d3c-4e73-ae7d-af1d50d22222.png",
   // Dr Saeed, generated with his real photo as a nano_banana_pro reference.
   drSaeedMeet: HF + "hf_20260701_010608_f6242f1c-4c75-43c4-8464-f7396b73b182.png",
+  drSaeedWash: HF + "hf_20260701_012804_5c1745e7-bfa9-4a2a-8a80-821816e645a5.png",
   drSaeedPortrait: HF + "hf_20260701_005231_f782ab18-7f6a-4512-bd66-cfe77ba86743.png",
   drSaeedConsult: HF + "hf_20260701_005235_78754c24-ddbf-4332-901f-4bbe8fb6f4c2.png",
   clinicTreatment: HF + "hf_20260701_005238_d0844102-79d0-4bf2-af5a-0c2ef99e3de8.png",
