@@ -33,7 +33,7 @@ export default function ThankYouPage() {
   return (
     <main className="min-h-[100svh] bg-cream flex flex-col">
       <header className="mx-auto w-full max-w-[1280px] px-5 lg:px-8 py-7">
-        <Link href="/" aria-label="Fortes Clinic" className="inline-flex">
+        <Link href="/female-hair-transplant" aria-label="Fortes Clinic" className="inline-flex">
           <Image
             src={logos.fortes}
             alt="Fortes Clinic"
@@ -99,7 +99,7 @@ export default function ThankYouPage() {
             </div>
 
             <Link
-              href="/"
+              href="/female-hair-transplant"
               className="inline-flex items-center gap-2 mt-9 nav-link !text-gray hover:!text-gold transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
