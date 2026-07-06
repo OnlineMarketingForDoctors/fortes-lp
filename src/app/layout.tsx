@@ -44,6 +44,7 @@ const kinfolk = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fortes-lp.vercel.app"),
+  robots: { index: false, follow: false },
   title: "Female Hair Transplant in London — Fortes Clinic",
   description:
     "Surgeon-led female hair transplants at our private Little Venice clinic. Discreet FUE & FUT techniques keep your length. Natural, lasting results from £1,999.",
