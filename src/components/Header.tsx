@@ -5,18 +5,28 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { logos, clinic } from "@/lib/assets";
 
-const leftNav = [
+type NavItem = { href: string; label: string };
+
+const defaultLeftNav: NavItem[] = [
   { href: "#results", label: "Before & After" },
   { href: "#why", label: "Why Choose Us" },
   { href: "#techniques", label: "Techniques" },
 ];
-const rightNav = [
+const defaultRightNav: NavItem[] = [
   { href: "#doctor", label: "Meet Dr Saeed" },
   { href: "#reviews", label: "Reviews" },
   { href: "#consult", label: "Contact" },
 ];
 
-export default function Header() {
+/** Nav links default to the female hair transplant LP; other landing pages
+ *  pass their own section anchors. */
+export default function Header({
+  leftNav = defaultLeftNav,
+  rightNav = defaultRightNav,
+}: {
+  leftNav?: NavItem[];
+  rightNav?: NavItem[];
+}) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 

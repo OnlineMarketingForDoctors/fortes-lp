@@ -3,7 +3,21 @@ import Script from "next/script";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { ai, clinic } from "@/lib/assets";
 
-export default function ContactForm() {
+/** Copy defaults to the female hair transplant LP; other landing pages pass
+ *  their own headline, intro and consultation-suite image. */
+export default function ContactForm({
+  eyebrow = "Begin privately",
+  heading = "Request a Consultation with Dr Saeed",
+  blurb = "A private, clinician-led conversation about your hair, your goals and the realistic outcomes available to you. There is never any pressure to proceed.",
+  image = ai.contactRoom,
+  imageAlt = "The Fortes Clinic consultation suite in Little Venice",
+}: {
+  eyebrow?: string;
+  heading?: string;
+  blurb?: string;
+  image?: string;
+  imageAlt?: string;
+}) {
   return (
     <section id="consult" className="bg-cream py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
@@ -12,8 +26,8 @@ export default function ContactForm() {
           <div className="lg:col-span-5 flex flex-col">
             <div className="relative flex-1 min-h-[280px] rounded-[10px] overflow-hidden ring-1 ring-black/5">
               <Image
-                src={ai.contactRoom}
-                alt="The Fortes Clinic consultation suite in Little Venice"
+                src={image}
+                alt={imageAlt}
                 fill
                 unoptimized
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -37,15 +51,11 @@ export default function ContactForm() {
           <div className="lg:col-span-7">
             <div className="bg-white text-ink rounded-[12px] p-7 lg:p-10 shadow-[var(--shadow-soft)]">
               <div className="text-center mb-8">
-                <p className="eyebrow mb-3">Begin privately</p>
+                <p className="eyebrow mb-3">{eyebrow}</p>
                 <h2 className="h-display text-[1.7rem] lg:text-[2.3rem] !leading-[1.12] text-ink">
-                  Request a Consultation with Dr Saeed
+                  {heading}
                 </h2>
-                <p className="text-gray text-sm mt-3 max-w-md mx-auto">
-                  A private, clinician-led conversation about your hair, your goals
-                  and the realistic outcomes available to you. There is never any
-                  pressure to proceed.
-                </p>
+                <p className="text-gray text-sm mt-3 max-w-md mx-auto">{blurb}</p>
               </div>
 
               <iframe
