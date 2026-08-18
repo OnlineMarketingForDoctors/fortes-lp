@@ -68,14 +68,9 @@ export default function NsHero() {
               ))}
             </ul>
 
-            <div className="flex flex-col sm:flex-row gap-5 sm:items-center">
-              <a href="#consult" className="btn btn-primary">
-                Book Your Free Consultation
-              </a>
-              <a href="#treatments" className="btn-text !text-white hover:!text-gold-light">
-                Compare the Four Treatments →
-              </a>
-            </div>
+            <a href="#consult" className="btn btn-primary">
+              Book Your Free Consultation
+            </a>
 
             <div className="mt-12 pt-8 border-t border-white/15">
               <p className="text-[0.62rem] uppercase tracking-[0.28em] text-white/55 mb-5">

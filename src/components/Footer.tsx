@@ -2,18 +2,21 @@ import Image from "next/image";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { logos, clinic } from "@/lib/assets";
 
-export default function Footer() {
+/** The location map is shown by default; landing pages that already cover
+ *  "finding us" in a section of their own pass showMap={false}. */
+export default function Footer({ showMap = true }: { showMap?: boolean }) {
   return (
     <footer className="bg-charcoal text-white/70">
-      {/* Map */}
-      <div className="w-full h-[320px] lg:h-[380px]">
-        <iframe
-          title="Fortes Clinic location"
-          src="https://www.google.com/maps?q=22+Clifton+Road,+Little+Venice,+London+W9+1ST&output=embed"
-          className="w-full h-full grayscale-[0.2]"
-          loading="lazy"
-        />
-      </div>
+      {showMap && (
+        <div className="w-full h-[320px] lg:h-[380px]">
+          <iframe
+            title="Fortes Clinic location"
+            src="https://www.google.com/maps?q=22+Clifton+Road,+Little+Venice,+London+W9+1ST&output=embed"
+            className="w-full h-full grayscale-[0.2]"
+            loading="lazy"
+          />
+        </div>
+      )}
 
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8 py-14 lg:py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">

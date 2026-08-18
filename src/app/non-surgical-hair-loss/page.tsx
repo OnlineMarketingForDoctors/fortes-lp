@@ -83,7 +83,7 @@ export default function NonSurgicalHairLossPage() {
         />
         <NsDisclaimer />
       </main>
-      <Footer />
+      <Footer showMap={false} />
     </>
   );
 }

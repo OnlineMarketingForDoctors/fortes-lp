@@ -20,7 +20,7 @@ const cards = [
 
 export default function NsLocation() {
   return (
-    <section className="bg-bg-light py-20 lg:py-28">
+    <section className="bg-cream py-20 lg:py-28">
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="eyebrow mb-4">Finding us</p>
