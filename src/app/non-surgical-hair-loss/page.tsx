@@ -14,8 +14,8 @@ import NsComparison from "@/components/nonsurgical/NsComparison";
 import NsTriage from "@/components/nonsurgical/NsTriage";
 import NsWhyFortes from "@/components/nonsurgical/NsWhyFortes";
 import NsProcess from "@/components/nonsurgical/NsProcess";
-import NsResults from "@/components/nonsurgical/NsResults";
 import NsReviews from "@/components/nonsurgical/NsReviews";
+import NsAccreditations from "@/components/nonsurgical/NsAccreditations";
 import NsDoctor from "@/components/nonsurgical/NsDoctor";
 import NsPricing from "@/components/nonsurgical/NsPricing";
 import NsLocation from "@/components/nonsurgical/NsLocation";
@@ -67,8 +67,8 @@ export default function NonSurgicalHairLossPage() {
         <SpinningDivider />
         <NsWhyFortes />
         <NsProcess />
-        <NsResults />
         <NsReviews />
+        <NsAccreditations />
         <SpinningDivider />
         <NsDoctor />
         <NsPricing />

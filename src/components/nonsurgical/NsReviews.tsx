@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { Star } from "lucide-react";
-import { accreditations, clinic } from "@/lib/assets";
+import { clinic } from "@/lib/assets";
 
 const reviews = [
   {
@@ -22,7 +21,7 @@ const reviews = [
 
 export default function NsReviews() {
   return (
-    <section id="reviews" className="bg-white py-20 lg:py-28">
+    <section id="reviews" className="bg-cream py-20 lg:py-28">
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -47,7 +46,7 @@ export default function NsReviews() {
           {reviews.map((r) => (
             <article
               key={r.initial}
-              className="bg-bg-lighter border border-line rounded-[10px] p-7 flex flex-col shadow-[var(--shadow-soft)]"
+              className="bg-white border border-line rounded-[10px] p-7 flex flex-col shadow-[var(--shadow-soft)]"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div
@@ -89,24 +88,6 @@ export default function NsReviews() {
           Reviews are shown as published. Individual experiences and outcomes
           vary.
         </p>
-
-        <div className="mt-20 pt-14 border-t border-line">
-          <p className="text-center eyebrow mb-12">Regulated &amp; accredited</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-10 items-center justify-items-center">
-            {accreditations.map((a) => (
-              <div key={a.label} className="relative h-16 lg:h-20 w-full max-w-[180px]">
-                <Image
-                  src={a.src}
-                  alt={a.label}
-                  fill
-                  unoptimized
-                  sizes="200px"
-                  className="object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
