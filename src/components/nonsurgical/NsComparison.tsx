@@ -83,7 +83,9 @@ export default function NsComparison() {
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-[12px] border border-line shadow-[var(--shadow-soft)]">
+        {/* From md up the real table; below it, one card per treatment, so
+            nothing depends on sideways scrolling. */}
+        <div className="hidden md:block overflow-x-auto rounded-[12px] border border-line shadow-[var(--shadow-soft)]">
           <table className="w-full min-w-[860px] border-collapse text-left">
             <caption className="sr-only">
               A comparison of PRP, PRF, exosome therapy and Regenera Activa at
@@ -139,6 +141,43 @@ export default function NsComparison() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        <div className="md:hidden space-y-5">
+          {columns.map((c, ci) => (
+            <div
+              key={c.label}
+              className="rounded-[12px] border border-line overflow-hidden shadow-[var(--shadow-soft)]"
+            >
+              <div className="flex items-center gap-4 bg-charcoal px-5 py-4">
+                <span className="relative w-12 h-12 flex-shrink-0 rounded-[8px] overflow-hidden ring-1 ring-white/15">
+                  <Image
+                    src={c.icon}
+                    alt=""
+                    fill
+                    unoptimized
+                    sizes="48px"
+                    className="object-cover"
+                    aria-hidden
+                  />
+                </span>
+                <h3 className="text-white font-ui uppercase tracking-[0.1em] text-[0.82rem] font-semibold">
+                  {c.label}
+                </h3>
+              </div>
+              <dl className="bg-white">
+                {rows.map((r) => (
+                  <div
+                    key={r.label}
+                    className="grid grid-cols-[7.5rem_1fr] gap-4 border-t border-line px-5 py-3.5"
+                  >
+                    <dt className="text-[0.82rem] font-semibold text-ink">{r.label}</dt>
+                    <dd className="text-[0.88rem] text-gray-mid">{r.values[ci]}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          ))}
         </div>
 
         <p className="text-xs text-gray-soft leading-relaxed max-w-3xl mt-6">
