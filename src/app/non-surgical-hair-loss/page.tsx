@@ -21,7 +21,6 @@ import NsPricing from "@/components/nonsurgical/NsPricing";
 import NsLocation from "@/components/nonsurgical/NsLocation";
 import NsFaq from "@/components/nonsurgical/NsFaq";
 import NsDisclaimer from "@/components/nonsurgical/NsDisclaimer";
-import { ai } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title:
@@ -78,8 +77,6 @@ export default function NonSurgicalHairLossPage() {
           eyebrow="Book"
           heading="Request a Consultation with Dr Saeed"
           blurb="A private, clinician-led conversation about what is driving your hair loss and which non-surgical treatment, if any, is right for it. The initial consultation is free and there is no obligation to book treatment."
-          image={ai.clinicRoom}
-          imageAlt="The treatment room at Fortes Clinic in Little Venice"
         />
         <NsDisclaimer />
       </main>

@@ -28,8 +28,8 @@ export default function NsLocation() {
           <div className="lg:col-span-6">
             <div className="relative aspect-[4/3] rounded-[10px] overflow-hidden ring-1 ring-black/5 shadow-[var(--shadow-soft)]">
               <Image
-                src={ai.clinicRoom}
-                alt="The Fortes Clinic treatment room in Little Venice"
+                src={ai.clinicInterior}
+                alt="Inside the Fortes Clinic in Little Venice"
                 fill
                 unoptimized
                 sizes="(min-width: 1024px) 48vw, 100vw"
