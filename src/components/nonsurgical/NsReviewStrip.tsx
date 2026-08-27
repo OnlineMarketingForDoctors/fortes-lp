@@ -1,15 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { reviewShots, clinic } from "@/lib/assets";
+import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import { clinic } from "@/lib/assets";
+import { reviews } from "./reviews";
 import GoogleBadge, { GoogleG } from "./GoogleBadge";
 
-/** Auto-advancing strip of real Google review screenshots, sitting directly
- *  under the hero. Deliberately has no section headline — the badge and the
- *  screenshots carry it. */
+/** Auto-advancing strip of the clinic's Google reviews, sitting directly under
+ *  the hero. Deliberately has no section headline — the badge and the reviews
+ *  carry it. */
 export default function NsReviewStrip() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
   const [selected, setSelected] = useState(0);
@@ -62,44 +62,69 @@ export default function NsReviewStrip() {
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          <div className="flex gap-5">
-            {reviewShots.map((r) => (
-              <figure
-                key={r.src}
-                className="relative flex-[0_0_86%] sm:flex-[0_0_47%] lg:flex-[0_0_32%]
-                           rounded-[10px] border border-line bg-white overflow-hidden shadow-[var(--shadow-soft)]"
+          <ul className="flex gap-5 items-stretch">
+            {reviews.map((r) => (
+              <li
+                key={r.name}
+                className="flex-[0_0_86%] sm:flex-[0_0_47%] lg:flex-[0_0_32%]"
               >
-                <div className="relative h-[420px] overflow-hidden">
-                  <Image
-                    src={r.src}
-                    alt={`Five-star Google review of Fortes Clinic from ${r.name}`}
-                    width={760}
-                    height={r.height}
-                    unoptimized
-                    loading="eager"
-                    className="w-full h-auto"
-                  />
-                  <div
-                    className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent"
+                <article className="relative h-full flex flex-col rounded-[10px] border border-line bg-white p-7 shadow-[var(--shadow-soft)]">
+                  <Quote
+                    className="absolute top-6 right-6 w-8 h-8 text-gold/15"
+                    strokeWidth={1.5}
                     aria-hidden
                   />
-                </div>
-                <figcaption className="flex items-center gap-2 border-t border-line px-5 py-3">
-                  <GoogleG className="w-4 h-4" />
-                  <span className="text-[0.75rem] text-gray-soft">
-                    Verified Google review
-                  </span>
-                </figcaption>
-              </figure>
+
+                  <header className="flex items-center gap-3 mb-4">
+                    <span
+                      className={`w-11 h-11 rounded-full flex items-center justify-center font-bold flex-shrink-0 ${r.color}`}
+                      aria-hidden
+                    >
+                      {r.initial}
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block font-semibold text-ink text-[0.92rem] truncate">
+                        {r.name}
+                      </span>
+                      <span className="block text-[0.72rem] text-gray-soft truncate">
+                        {r.meta}
+                      </span>
+                    </span>
+                  </header>
+
+                  <div className="flex items-center gap-2.5 mb-4">
+                    <span className="flex gap-0.5" aria-label="Rated 5 out of 5">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-3.5 h-3.5 fill-gold-bright text-gold-bright"
+                        />
+                      ))}
+                    </span>
+                    <span className="text-[0.72rem] text-gray-soft">{r.date}</span>
+                  </div>
+
+                  <p className="flex-1 text-[0.9rem] leading-relaxed text-gray-mid line-clamp-[9]">
+                    {r.body}
+                  </p>
+
+                  <footer className="flex items-center gap-2 mt-6 pt-4 border-t border-line">
+                    <GoogleG className="w-4 h-4" />
+                    <span className="text-[0.72rem] text-gray-soft">
+                      Verified Google review
+                    </span>
+                  </footer>
+                </article>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
         <div className="flex items-center justify-between gap-6 mt-8">
           <div className="flex gap-1.5">
-            {reviewShots.map((r, i) => (
+            {reviews.map((r, i) => (
               <button
-                key={r.src}
+                key={r.name}
                 type="button"
                 onClick={() => emblaApi?.scrollTo(i)}
                 aria-label={`Go to review ${i + 1}`}

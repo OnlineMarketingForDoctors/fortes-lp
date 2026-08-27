@@ -4,10 +4,10 @@ import { video, mediaLogos } from "@/lib/assets";
 import GoogleBadge from "./GoogleBadge";
 
 const bullets = [
-  "Assessment and treatment with a GMC-registered doctor — no salespeople, ever",
-  "PRP, PRF, exosome therapy and Regenera Activa all under one roof",
-  "No surgery, no stitches, no visible downtime — most people return to work the same day",
-  "For men and women, including diffuse and female-pattern thinning",
+  "Doctor-led throughout — never a salesperson",
+  "PRP, PRF, exosomes and Regenera Activa under one roof",
+  "No surgery, no stitches, no downtime",
+  "For men and women, including diffuse thinning",
 ];
 
 export default function NsHero() {
