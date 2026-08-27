@@ -31,6 +31,8 @@ export const photos = {
   trichology: "/assets/photos/Trichology-2-1-scaled.jpg",
   // Dr Saeed injecting a patient's scalp; used for Regenera Activa.
   regeneraActiva: "/assets/photos/regenera-activa.webp",
+  // The clinic signage in Little Venice.
+  clinicSignage: "/assets/photos/fortes-clinic-signage.jpg",
 };
 
 export const reviewsScreenshot = "/assets/reviews/google-reviews-screenshot.png";
