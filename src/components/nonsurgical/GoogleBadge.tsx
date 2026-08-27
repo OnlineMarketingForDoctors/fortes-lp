@@ -12,26 +12,18 @@ export function GoogleG({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
-/** Google rating badge. `dark` styles it for the hero's video background. */
-export default function GoogleBadge({ dark = false }: { dark?: boolean }) {
+/** Google rating badge, shown above the review carousel. */
+export default function GoogleBadge() {
   return (
     <a
       href={clinic.reviewsUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-3.5 rounded-full py-2.5 pl-3.5 pr-5 transition ${
-        dark
-          ? "border border-white/20 bg-white/[0.07] backdrop-blur-sm hover:bg-white/[0.12]"
-          : "border border-line bg-white hover:border-gold"
-      }`}
+      className="inline-flex items-center gap-3.5 rounded-full border border-line bg-white py-2.5 pl-3.5 pr-5 transition hover:border-gold"
     >
       <GoogleG className="w-6 h-6 flex-shrink-0" />
       <span className="flex items-baseline gap-2">
-        <span
-          className={`font-heading font-black text-lg leading-none ${
-            dark ? "text-white" : "text-ink"
-          }`}
-        >
+        <span className="font-heading font-black text-lg leading-none text-ink">
           {clinic.rating}
         </span>
         <span className="flex gap-0.5 self-center">
@@ -40,9 +32,7 @@ export default function GoogleBadge({ dark = false }: { dark?: boolean }) {
           ))}
         </span>
       </span>
-      <span
-        className={`text-[0.78rem] leading-tight ${dark ? "text-white/70" : "text-gray"}`}
-      >
+      <span className="text-[0.78rem] leading-tight text-gray">
         {clinic.reviewCount}+ Google
         <br />
         reviews

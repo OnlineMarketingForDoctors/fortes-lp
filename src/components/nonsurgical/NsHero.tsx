@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { video, mediaLogos } from "@/lib/assets";
-import GoogleBadge from "./GoogleBadge";
 
 const bullets = [
   "Doctor-led throughout, never a salesperson",
@@ -68,12 +67,9 @@ export default function NsHero() {
               ))}
             </ul>
 
-            <div className="flex flex-wrap items-center gap-5">
-              <a href="#consult" className="btn btn-primary">
-                Book Your Free Consultation
-              </a>
-              <GoogleBadge dark />
-            </div>
+            <a href="#consult" className="btn btn-primary">
+              Book Your Free Consultation
+            </a>
 
             <div className="mt-12 pt-8 border-t border-white/15">
               <p className="text-[0.62rem] uppercase tracking-[0.28em] text-white/55 mb-5">
