@@ -81,7 +81,7 @@ export default function NsHero() {
                     width={200}
                     height={80}
                     unoptimized
-                    className="h-12 lg:h-14 w-auto object-contain [filter:brightness(0)_invert(1)]"
+                    className="h-[4.5rem] lg:h-[5.25rem] w-auto object-contain [filter:brightness(0)_invert(1)]"
                   />
                 </li>
               ))}
