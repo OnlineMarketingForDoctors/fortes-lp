@@ -126,7 +126,7 @@ export default function NsReviewStrip() {
                     }}
                     id={`review-body-${i}`}
                     className={`flex-1 text-[0.9rem] leading-relaxed text-gray-mid whitespace-pre-line ${
-                      expanded === i ? "" : "line-clamp-[9]"
+                      expanded === i ? "" : "line-clamp-6"
                     }`}
                   >
                     {r.body}

@@ -35,9 +35,7 @@ export const treatments: Treatment[] = [
     image: ns.prpInjection,
     imageAlt: "Platelet rich plasma being injected into a man's thinning crown",
     paragraphs: [
-      "PRP hair treatment — platelet rich plasma hair treatment — uses the platelets in your own blood to support follicle activity in areas of thinning. It is the most established non-surgical hair loss treatment we offer, and for most people it is the sensible place to start.",
-      "A sample of blood is taken from your arm and spun in a centrifuge to separate it into layers. The platelet-rich layer is prepared and injected into the affected areas of the scalp. Platelets carry growth factors and cytokines involved in repair, and the aim of PRP for hair growth is to use those signals to support density and hair quality in a natural, non-surgical way.",
-      "PRP for thinning hair and PRP for hair regrowth are used most often for early-stage, diffuse loss — the widening parting, the softening temple, the crown that has thinned gradually. PRP injections for hair loss can also be used after a hair transplant to support the transplanted follicles.",
+      "PRP hair treatment — platelet rich plasma hair treatment — uses the platelets in your own blood to support follicle activity in areas of thinning. A sample of blood is taken from your arm and spun in a centrifuge, and the platelet-rich layer is injected into the affected areas of the scalp, where its growth factors support density and hair quality in a natural, non-surgical way. It is the most established non-surgical treatment we offer, used most often for early-stage, diffuse loss, and it can also be used after a hair transplant to support the transplanted follicles.",
     ],
     benefits: [
       { lead: "Uses your own blood", rest: "no external substances involved in the PRP itself" },
@@ -77,8 +75,7 @@ export const treatments: Treatment[] = [
     image: ns.prfCentrifuge,
     imageAlt: "A blood centrifuge and spun tubes prepared for PRF treatment",
     paragraphs: [
-      "PRF hair treatment is the second generation of the same idea. Platelet rich fibrin hair treatment uses your own blood, but it is spun more slowly and without anticoagulant. What that produces is different: as well as platelets, PRF retains white cells and fibrin, which forms a soft scaffold in the tissue.",
-      "That scaffold is the point. Rather than releasing growth factors all at once, PRF for hair loss releases them gradually as the fibrin matrix breaks down. PRF for hair and PRF hair restoration are therefore often discussed where a slower, more sustained release is preferred, or where someone has already had PRP and wants to try a different preparation.",
+      "PRF hair treatment is the second generation of the same idea. Platelet rich fibrin uses your own blood, but it is spun more slowly and without anticoagulant, so it retains white cells and fibrin — a soft scaffold that releases growth factors gradually as it breaks down, rather than all at once. PRF for hair loss is therefore often discussed where a slower, more sustained release is preferred, or where someone has already had PRP and wants to try a different preparation.",
     ],
     callout: {
       lead: "Not widely available in London.",
@@ -116,9 +113,7 @@ export const treatments: Treatment[] = [
     image: ns.exosomeVials,
     imageAlt: "Exosome solution being drawn from a vial into a syringe",
     paragraphs: [
-      "Exosomes are extracellular vesicles — very small packages that cells use to signal to one another. They carry proteins, lipids and genetic signalling material. Exosome hair therapy applies that signalling directly to the scalp, and exosomes for hair loss have become one of the most discussed developments in regenerative hair medicine.",
-      "Where PRP and PRF concentrate what is already in your blood, exosome treatment for hair delivers a prepared, standardised concentration of signalling material. That is the practical distinction, and it is why exosomes for hair are often raised where someone has had a limited response to platelet-based treatment, or where platelet quality may be reduced.",
-      "We will be straightforward with you about the evidence. Exosome therapy for hair loss is a newer field than PRP, the published research is still developing, and it is not a licensed medicine for hair loss in the UK. What we can tell you is who tends to be considered suitable, what a course involves, and what it is reasonable to expect — which is a conversation to have at your consultation, not a promise to make on a web page.",
+      "Exosomes are extracellular vesicles — very small packages that cells use to signal to one another. Where PRP and PRF concentrate what is already in your blood, exosome hair therapy delivers a prepared, standardised concentration of that signalling material to the scalp, which is why exosomes for hair loss are often raised where someone has had a limited response to platelet-based treatment. We will be straightforward with you about the evidence: it is a newer field than PRP, the research is still developing, and it is not a licensed medicine for hair loss in the UK.",
     ],
     benefits: [
       { lead: "Concentrated signalling", rest: "a prepared, consistent preparation rather than one derived from your own blood on the day" },
@@ -157,9 +152,7 @@ export const treatments: Treatment[] = [
     image: ns.regeneraPunch,
     imageAlt: "A small punch of scalp tissue taken from behind a patient's ear",
     paragraphs: [
-      "Regenera Activa is different from the other three, because it does not start with blood. Regenera Activa treatment takes a small punch of scalp tissue — usually from behind the ear, under local anaesthetic — and processes it in a dedicated device to produce a suspension of your own cells, which is then injected into the thinning areas.",
-      "It is a micrografting technique, and the practical appeal is that Regenera hair treatment is delivered in a single session rather than a monthly course. For people who want to act on hair loss but cannot commit to repeated monthly appointments, that matters. Regenera for hair loss is generally discussed for early to moderate thinning, in the same window where the other non-surgical options are most useful.",
-      "Dr Saeed performs Regenera Activa at our Little Venice clinic. As with everything else on this page, whether Regenera hair treatment suits you depends on your assessment.",
+      "Regenera Activa is different from the other three, because it does not start with blood. A small punch of scalp tissue — usually from behind the ear, under local anaesthetic — is processed in a dedicated device to produce a suspension of your own cells, which is then injected into the thinning areas. The practical appeal of this micrografting technique is that Regenera hair treatment is delivered in a single session rather than a monthly course. Dr Saeed performs it at our Little Venice clinic, for early to moderate thinning.",
     ],
     benefits: [
       { lead: "Single session", rest: "not a monthly course" },
