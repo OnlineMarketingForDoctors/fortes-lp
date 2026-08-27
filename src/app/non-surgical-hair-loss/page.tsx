@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import BackToTop from "@/components/BackToTop";
 import ContactForm from "@/components/ContactForm";
 import { SpinningDivider } from "@/components/SpinningBadge";
 import NsHero from "@/components/nonsurgical/NsHero";
@@ -52,7 +53,8 @@ export default function NonSurgicalHairLossPage() {
     <>
       <Header leftNav={leftNav} rightNav={rightNav} />
       <FloatingCTA />
-      <WhatsAppButton />
+      <WhatsAppButton side="left" />
+      <BackToTop />
       <main>
         <NsHero />
         <NsReviewStrip />
