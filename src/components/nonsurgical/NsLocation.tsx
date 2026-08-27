@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { MapPin, Train, Clock } from "lucide-react";
-import { ai, clinic } from "@/lib/assets";
+import { clinic, photos } from "@/lib/assets";
 
 const points = [
   {
@@ -28,8 +28,8 @@ export default function NsLocation() {
           <div className="lg:col-span-6">
             <div className="relative aspect-[4/3] rounded-[10px] overflow-hidden ring-1 ring-black/5 shadow-[var(--shadow-soft)]">
               <Image
-                src={ai.clinicInterior}
-                alt="Inside the Fortes Clinic in Little Venice"
+                src={photos.clinicExterior}
+                alt="The Fortes Clinic shopfront at 22 Clifton Road, Little Venice"
                 fill
                 unoptimized
                 sizes="(min-width: 1024px) 48vw, 100vw"

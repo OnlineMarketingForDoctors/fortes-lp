@@ -33,6 +33,8 @@ export const photos = {
   regeneraActiva: "/assets/photos/regenera-activa.webp",
   // The clinic signage in Little Venice.
   clinicSignage: "/assets/photos/fortes-clinic-signage.jpg",
+  // The clinic shopfront on Clifton Road.
+  clinicExterior: "/assets/photos/fortes-clinic-exterior.jpg",
 };
 
 export const reviewsScreenshot = "/assets/reviews/google-reviews-screenshot.png";
