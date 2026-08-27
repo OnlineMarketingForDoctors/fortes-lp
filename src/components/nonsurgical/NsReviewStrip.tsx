@@ -15,7 +15,9 @@ export default function NsReviewStrip() {
   const [selected, setSelected] = useState(0);
   const [paused, setPaused] = useState(false);
   const [expanded, setExpanded] = useState<number | null>(null);
-  const [clipped, setClipped] = useState<boolean[]>([]);
+  // Assume every review overflows the clamp so the control is in the
+  // prerendered markup; the measurement below removes it where it is not.
+  const [clipped, setClipped] = useState<boolean[]>(() => reviews.map(() => true));
   const bodyRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
   // Only offer "Read more" where the clamp actually hides something.
