@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { clinic } from "@/lib/assets";
 import { reviews } from "./reviews";
 import GoogleBadge, { GoogleG } from "./GoogleBadge";
@@ -87,13 +87,12 @@ export default function NsReviewStrip() {
                 className="flex-[0_0_86%] sm:flex-[0_0_47%] lg:flex-[0_0_32%]"
               >
                 <article className="relative h-full flex flex-col rounded-[10px] border border-line bg-white p-7 shadow-[var(--shadow-soft)]">
-                  <Quote
-                    className="absolute top-6 right-6 w-8 h-8 text-gold/15"
-                    strokeWidth={1.5}
-                    aria-hidden
-                  />
+                  <span className="absolute top-6 right-6 flex" data-google>
+                    <GoogleG className="w-6 h-6" />
+                    <span className="sr-only">Google review</span>
+                  </span>
 
-                  <header className="flex items-center gap-3 mb-4">
+                  <header className="flex items-center gap-3 mb-4 pr-10">
                     <span
                       className={`w-11 h-11 rounded-full flex items-center justify-center font-bold flex-shrink-0 ${r.color}`}
                       aria-hidden
@@ -145,13 +144,6 @@ export default function NsReviewStrip() {
                       {expanded === i ? "Show less" : "Read more"}
                     </button>
                   )}
-
-                  <footer className="flex items-center gap-2 mt-6 pt-4 border-t border-line">
-                    <GoogleG className="w-4 h-4" />
-                    <span className="text-[0.72rem] text-gray-soft">
-                      Verified Google review
-                    </span>
-                  </footer>
                 </article>
               </li>
             ))}
