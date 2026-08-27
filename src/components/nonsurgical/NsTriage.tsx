@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Plus } from "lucide-react";
-import { ns } from "@/lib/assets";
+import { photos } from "@/lib/assets";
 
 const cases = [
   {
@@ -53,8 +53,8 @@ export default function NsTriage() {
               </p>
               <div className="relative aspect-[4/3] rounded-[10px] overflow-hidden ring-1 ring-black/5 shadow-[var(--shadow-soft)]">
                 <Image
-                  src={ns.scalpAnalysis}
-                  alt="A trichology scalp analysis being reviewed with a patient"
+                  src={photos.trichology}
+                  alt="Dr Ahmad Saeed examining a patient's scalp with a dermatoscope"
                   fill
                   unoptimized
                   sizes="(min-width: 1024px) 40vw, 100vw"

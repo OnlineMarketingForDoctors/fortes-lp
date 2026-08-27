@@ -1,4 +1,4 @@
-import { ns } from "@/lib/assets";
+import { ns, photos } from "@/lib/assets";
 
 export type Treatment = {
   id: string;
@@ -149,8 +149,8 @@ export const treatments: Treatment[] = [
     },
     eyebrow: "Treatment 04 · available in clinic",
     title: "Regenera Activa",
-    image: ns.regeneraPunch,
-    imageAlt: "A small punch of scalp tissue taken from behind a patient's ear",
+    image: photos.regeneraActiva,
+    imageAlt: "Dr Ahmad Saeed injecting a patient's scalp at Fortes Clinic",
     paragraphs: [
       "Regenera Activa is different from the other three, because it does not start with blood. A small punch of scalp tissue, usually taken from behind the ear under local anaesthetic, is processed in a dedicated device to produce a suspension of your own cells, which is then injected into the thinning areas. The practical appeal of this micrografting technique is that Regenera hair treatment is delivered in a single session rather than a monthly course. Dr Saeed performs it at our Little Venice clinic, for early to moderate thinning.",
     ],

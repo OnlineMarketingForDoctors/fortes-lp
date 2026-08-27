@@ -27,6 +27,10 @@ export const doctor = {
 
 export const photos = {
   femalePattern: "/assets/photos/female-pattern-hair-loss.jpg",
+  // Dr Saeed examining a patient's scalp with a dermatoscope.
+  trichology: "/assets/photos/Trichology-2-1-scaled.jpg",
+  // Dr Saeed injecting a patient's scalp; used for Regenera Activa.
+  regeneraActiva: "/assets/photos/regenera-activa.webp",
 };
 
 export const reviewsScreenshot = "/assets/reviews/google-reviews-screenshot.png";
