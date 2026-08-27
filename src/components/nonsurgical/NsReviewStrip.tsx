@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import { clinic } from "@/lib/assets";
@@ -14,9 +14,25 @@ export default function NsReviewStrip() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
   const [selected, setSelected] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [expanded, setExpanded] = useState<number | null>(null);
+  const [clipped, setClipped] = useState<boolean[]>([]);
+  const bodyRefs = useRef<(HTMLParagraphElement | null)[]>([]);
+
+  // Only offer "Read more" where the clamp actually hides something.
+  useEffect(() => {
+    const measure = () =>
+      setClipped(
+        bodyRefs.current.map((el) => !!el && el.scrollHeight > el.clientHeight + 2),
+      );
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
 
   const onSelect = useCallback(() => {
-    if (emblaApi) setSelected(emblaApi.selectedScrollSnap());
+    if (!emblaApi) return;
+    setSelected(emblaApi.selectedScrollSnap());
+    setExpanded(null);
   }, [emblaApi]);
 
   useEffect(() => {
@@ -26,10 +42,10 @@ export default function NsReviewStrip() {
   }, [emblaApi, onSelect]);
 
   useEffect(() => {
-    if (!emblaApi || paused) return;
+    if (!emblaApi || paused || expanded !== null) return;
     const id = setInterval(() => emblaApi.scrollNext(), 4500);
     return () => clearInterval(id);
-  }, [emblaApi, paused]);
+  }, [emblaApi, paused, expanded]);
 
   return (
     <section className="bg-cream border-y border-line py-12 lg:py-16">
@@ -63,7 +79,7 @@ export default function NsReviewStrip() {
           onMouseLeave={() => setPaused(false)}
         >
           <ul className="flex gap-5 items-stretch">
-            {reviews.map((r) => (
+            {reviews.map((r, i) => (
               <li
                 key={r.name}
                 className="flex-[0_0_86%] sm:flex-[0_0_47%] lg:flex-[0_0_32%]"
@@ -104,9 +120,29 @@ export default function NsReviewStrip() {
                     <span className="text-[0.72rem] text-gray-soft">{r.date}</span>
                   </div>
 
-                  <p className="flex-1 text-[0.9rem] leading-relaxed text-gray-mid line-clamp-[9]">
+                  <p
+                    ref={(el) => {
+                      bodyRefs.current[i] = el;
+                    }}
+                    id={`review-body-${i}`}
+                    className={`flex-1 text-[0.9rem] leading-relaxed text-gray-mid whitespace-pre-line ${
+                      expanded === i ? "" : "line-clamp-[9]"
+                    }`}
+                  >
                     {r.body}
                   </p>
+
+                  {(clipped[i] || expanded === i) && (
+                    <button
+                      type="button"
+                      onClick={() => setExpanded(expanded === i ? null : i)}
+                      aria-expanded={expanded === i}
+                      aria-controls={`review-body-${i}`}
+                      className="self-start mt-3 text-[0.78rem] font-ui font-semibold uppercase tracking-[0.12em] text-gold border-b border-gold/40 pb-0.5 transition-colors hover:text-gold-light hover:border-gold-light"
+                    >
+                      {expanded === i ? "Show less" : "Read more"}
+                    </button>
+                  )}
 
                   <footer className="flex items-center gap-2 mt-6 pt-4 border-t border-line">
                     <GoogleG className="w-4 h-4" />
