@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ai } from "@/lib/assets";
+import { ns } from "@/lib/assets";
 
 export default function NsEmotionalHook() {
   return (
@@ -42,8 +42,8 @@ export default function NsEmotionalHook() {
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[10px] shadow-[var(--shadow-soft)] ring-1 ring-white/10">
               <Image
-                src={ai.emotionalHook}
-                alt="A woman noticing her widening parting in the mirror"
+                src={ns.manMirror}
+                alt="A man examining his thinning crown in the bathroom mirror"
                 fill
                 unoptimized
                 sizes="(min-width: 1024px) 40vw, 100vw"

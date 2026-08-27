@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { ns } from "@/lib/assets";
 import {
   MessagesSquare,
   ClipboardList,
@@ -58,6 +60,16 @@ export default function NsProcess() {
               <a href="#consult" className="btn btn-primary">
                 Book Your Free Consultation
               </a>
+              <div className="relative aspect-[4/3] mt-10 rounded-[10px] overflow-hidden ring-1 ring-black/5 shadow-[var(--shadow-soft)]">
+                <Image
+                  src={ns.treatmentChair}
+                  alt="A patient seated in the treatment room while his session is prepared"
+                  fill
+                  unoptimized
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
 

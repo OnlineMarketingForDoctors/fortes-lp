@@ -1,3 +1,7 @@
+import Image from "next/image";
+import { Plus } from "lucide-react";
+import { ns } from "@/lib/assets";
+
 const cases = [
   {
     title: "Early thinning, still mostly covered",
@@ -5,8 +9,8 @@ const cases = [
     rec: "Usually PRP or PRF first",
   },
   {
-    title: "Diffuse thinning, often in women",
-    body: "Reduced volume across the whole scalp rather than a defined bald patch — frequently post-partum, peri-menopausal or following illness or stress. Often the group told they are not hair transplant candidates.",
+    title: "Diffuse thinning across the whole scalp",
+    body: "Reduced volume everywhere rather than a defined bald patch — following illness, stress, medication or hormonal change. In women this is frequently post-partum or peri-menopausal, and it is often the group told they are not hair transplant candidates.",
     rec: "Assessment first, then PRP, PRF or exosomes",
   },
   {
@@ -35,35 +39,65 @@ export default function NsTriage() {
   return (
     <section id="suits" className="bg-cream py-20 lg:py-28">
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="eyebrow mb-4">Which option suits you</p>
-          <h2 className="h-display text-[2rem] lg:text-[2.8rem] !leading-[1.14] text-ink mb-4">
-            Start With the Cause, Not the Treatment
-          </h2>
-          <p className="lead text-gray-mid">
-            Hair loss treatment without surgery works best in a particular window.
-            These are the situations we see most often — and what we would usually
-            discuss in each.
-          </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {cases.map((c) => (
-            <div
-              key={c.title}
-              className="flex flex-col rounded-[10px] border border-line bg-white p-7 shadow-[var(--shadow-soft)]"
-            >
-              <h3 className="heading-sans text-[1.05rem] text-ink mb-3">
-                {c.title}
-              </h3>
-              <p className="text-gray text-[0.92rem] leading-relaxed">{c.body}</p>
-              <span className="mt-auto pt-6">
-                <span className="inline-block rounded-[8px] border border-gold/50 bg-cream px-4 py-2 text-[0.8rem] font-semibold text-gold">
-                  {c.rec}
-                </span>
-              </span>
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="lg:col-span-5">
+            <div className="lg:sticky lg:top-28">
+              <p className="eyebrow mb-4">Which option suits you</p>
+              <h2 className="h-display text-[2rem] lg:text-[2.8rem] !leading-[1.14] text-ink mb-6">
+                Start With the Cause, Not the Treatment
+              </h2>
+              <p className="lead text-gray-mid max-w-[46ch] mb-9">
+                Hair loss treatment without surgery works best in a particular
+                window. These are the situations we see most often — open the one
+                that sounds like you.
+              </p>
+              <div className="relative aspect-[4/3] rounded-[10px] overflow-hidden ring-1 ring-black/5 shadow-[var(--shadow-soft)]">
+                <Image
+                  src={ns.scalpAnalysis}
+                  alt="A trichology scalp analysis being reviewed with a patient"
+                  fill
+                  unoptimized
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
-          ))}
+          </div>
+
+          <div className="lg:col-span-7">
+            <div className="border-t border-line">
+              {cases.map((c, i) => (
+                <details
+                  key={c.title}
+                  className="group border-b border-line"
+                  open={i === 0}
+                >
+                  <summary className="flex items-start justify-between gap-6 cursor-pointer list-none py-6 [&::-webkit-details-marker]:hidden">
+                    <span className="flex items-baseline gap-4">
+                      <span className="font-display text-gold text-[0.7rem] tracking-[0.22em]">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="heading-sans text-[1.05rem] lg:text-[1.15rem] text-ink transition-colors group-hover:text-gold">
+                        {c.title}
+                      </span>
+                    </span>
+                    <Plus
+                      className="w-5 h-5 mt-0.5 flex-shrink-0 text-gold transition-transform duration-200 group-open:rotate-45"
+                      strokeWidth={2}
+                    />
+                  </summary>
+                  <div className="pb-7 pl-0 sm:pl-11">
+                    <p className="text-gray text-[0.95rem] leading-relaxed mb-5">
+                      {c.body}
+                    </p>
+                    <span className="inline-block rounded-[8px] border border-gold/50 bg-white px-4 py-2 text-[0.8rem] font-semibold text-gold">
+                      {c.rec}
+                    </span>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

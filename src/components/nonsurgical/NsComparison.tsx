@@ -1,4 +1,12 @@
-const columns = ["PRP", "PRF", "Exosomes", "Regenera Activa"];
+import Image from "next/image";
+import { treatments } from "./treatments";
+
+const columns = [
+  { label: "PRP", icon: treatments[0].icon },
+  { label: "PRF", icon: treatments[1].icon },
+  { label: "Exosomes", icon: treatments[2].icon },
+  { label: "Regenera Activa", icon: treatments[3].icon },
+];
 
 const rows: { label: string; values: [string, string, string, string] }[] = [
   {
@@ -88,11 +96,24 @@ export default function NsComparison() {
                 </th>
                 {columns.map((c) => (
                   <th
-                    key={c}
+                    key={c.label}
                     scope="col"
-                    className="bg-charcoal text-white font-ui uppercase tracking-[0.1em] text-[0.78rem] font-semibold px-5 py-4"
+                    className="bg-charcoal text-white font-ui uppercase tracking-[0.1em] text-[0.78rem] font-semibold px-5 pt-5 pb-4 align-bottom"
                   >
-                    {c}
+                    <span className="flex flex-col items-start gap-3">
+                      <span className="relative w-14 h-14 rounded-[8px] overflow-hidden ring-1 ring-white/15">
+                        <Image
+                          src={c.icon}
+                          alt=""
+                          fill
+                          unoptimized
+                          sizes="56px"
+                          className="object-cover"
+                          aria-hidden
+                        />
+                      </span>
+                      {c.label}
+                    </span>
                   </th>
                 ))}
               </tr>
@@ -108,7 +129,7 @@ export default function NsComparison() {
                   </th>
                   {r.values.map((v, i) => (
                     <td
-                      key={columns[i]}
+                      key={columns[i].label}
                       className="px-5 py-4 align-top text-[0.9rem] text-gray-mid bg-white"
                     >
                       {v}

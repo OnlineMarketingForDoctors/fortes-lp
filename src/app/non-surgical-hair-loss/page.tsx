@@ -6,7 +6,6 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ContactForm from "@/components/ContactForm";
 import { SpinningDivider } from "@/components/SpinningBadge";
 import NsHero from "@/components/nonsurgical/NsHero";
-import NsTrustStrip from "@/components/nonsurgical/NsTrustStrip";
 import NsEmotionalHook from "@/components/nonsurgical/NsEmotionalHook";
 import NsTreatmentPicker from "@/components/nonsurgical/NsTreatmentPicker";
 import NsTreatments from "@/components/nonsurgical/NsTreatments";
@@ -14,7 +13,7 @@ import NsComparison from "@/components/nonsurgical/NsComparison";
 import NsTriage from "@/components/nonsurgical/NsTriage";
 import NsWhyFortes from "@/components/nonsurgical/NsWhyFortes";
 import NsProcess from "@/components/nonsurgical/NsProcess";
-import NsReviews from "@/components/nonsurgical/NsReviews";
+import NsReviewStrip from "@/components/nonsurgical/NsReviewStrip";
 import NsAccreditations from "@/components/nonsurgical/NsAccreditations";
 import NsDoctor from "@/components/nonsurgical/NsDoctor";
 import NsPricing from "@/components/nonsurgical/NsPricing";
@@ -56,7 +55,7 @@ export default function NonSurgicalHairLossPage() {
       <WhatsAppButton />
       <main>
         <NsHero />
-        <NsTrustStrip />
+        <NsReviewStrip />
         <NsEmotionalHook />
         <SpinningDivider />
         <NsTreatmentPicker />
@@ -67,7 +66,6 @@ export default function NonSurgicalHairLossPage() {
         <SpinningDivider />
         <NsWhyFortes />
         <NsProcess />
-        <NsReviews />
         <NsAccreditations />
         <SpinningDivider />
         <NsDoctor />

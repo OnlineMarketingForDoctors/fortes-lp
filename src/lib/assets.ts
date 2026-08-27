@@ -82,6 +82,38 @@ export const ai = {
   clinicRoom: HFM + "a661cdf3-f743-4b44-b76d-3d9263225b2b.png",
 };
 
+// Male-oriented imagery for the non-surgical hair loss LP, generated with
+// Higgsfield nano_banana_pro and stored locally (resized + compressed).
+export const ns = {
+  prpInjection: "/assets/nonsurgical/prp-injection.jpg",
+  prfCentrifuge: "/assets/nonsurgical/prf-centrifuge.jpg",
+  exosomeVials: "/assets/nonsurgical/exosome-vials.jpg",
+  regeneraPunch: "/assets/nonsurgical/regenera-punch.jpg",
+  iconPrp: "/assets/nonsurgical/icon-prp.jpg",
+  iconPrf: "/assets/nonsurgical/icon-prf.jpg",
+  iconExosomes: "/assets/nonsurgical/icon-exosomes.jpg",
+  iconRegenera: "/assets/nonsurgical/icon-regenera.jpg",
+  manMirror: "/assets/nonsurgical/man-mirror.jpg",
+  consultDermatoscope: "/assets/nonsurgical/consult-dermatoscope.jpg",
+  treatmentChair: "/assets/nonsurgical/treatment-chair.jpg",
+  scalpAnalysis: "/assets/nonsurgical/scalp-analysis.jpg",
+};
+
+// Screenshots of real Google reviews, ordered with the non-surgical / PRP
+// mentions first. All are 760px wide; heights vary, so the carousel scales
+// each to the card width and crops the overflow at the bottom.
+export const reviewShots = [
+  { src: "/assets/reviews/review-01.webp", height: 762, name: "Nicky Brook" },
+  { src: "/assets/reviews/review-02.webp", height: 1104, name: "Ismael Sancho" },
+  { src: "/assets/reviews/review-03.webp", height: 905, name: "Mo Gazeranchi" },
+  { src: "/assets/reviews/review-04.webp", height: 730, name: "Aliyar Gazeranchi" },
+  { src: "/assets/reviews/review-05.webp", height: 950, name: "H Amini" },
+  { src: "/assets/reviews/review-06.webp", height: 570, name: "Nicola Cucciniello" },
+  { src: "/assets/reviews/review-07.webp", height: 547, name: "Haider Shubbar" },
+  { src: "/assets/reviews/review-08.webp", height: 461, name: "Bill Langford" },
+  { src: "/assets/reviews/review-09.webp", height: 1474, name: "Christian Oldroyd" },
+];
+
 export const clinic = {
   phone: "020 3962 0303",
   phoneHref: "tel:+442039620303",
