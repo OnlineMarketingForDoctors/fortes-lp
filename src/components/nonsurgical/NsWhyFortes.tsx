@@ -6,14 +6,16 @@ type Tile =
   | { kind: "image"; span: string; src: string; alt: string; eyebrow: string; caption: string };
 
 /**
- * Bento: four real clinic photographs interleaved with the six reasons.
- * Spans are set at lg only; below that the grid falls back to one and then
- * two even columns. Rows grow past their minimum so no card clips its copy.
+ * Bento: four real clinic photographs interleaved with five reasons, laid
+ * out as four columns by three rows at lg. The CQC tile was dropped because
+ * the reception photograph's caption already carries it. Below lg the grid
+ * falls back to one and then two even columns, and rows grow past their
+ * minimum so no card clips its copy.
  */
 const tiles: Tile[] = [
   {
     kind: "image",
-    span: "lg:col-span-2 lg:row-span-2",
+    span: "lg:col-span-2",
     src: ai.clinicRoom,
     alt: "The Fortes Clinic reception in Little Venice",
     eyebrow: "The clinic",
@@ -21,14 +23,14 @@ const tiles: Tile[] = [
   },
   {
     kind: "text",
-    span: "lg:col-span-1 lg:row-span-2",
+    span: "lg:col-span-1",
     n: "01",
     t: "Doctor-Led From the First Appointment",
     b: "Your assessment and your treatment are carried out by a GMC-registered doctor. No technicians, no sales consultation dressed up as a clinical one.",
   },
   {
     kind: "image",
-    span: "lg:col-span-1 lg:row-span-2",
+    span: "lg:col-span-1",
     src: ai.drSaeedPortrait,
     alt: "Dr Ahmad Saeed at the Fortes Clinic reception",
     eyebrow: "Dr Ahmad Saeed",
@@ -50,11 +52,19 @@ const tiles: Tile[] = [
   },
   {
     kind: "image",
-    span: "lg:col-span-2 lg:row-span-2",
+    span: "lg:col-span-2",
     src: ai.clinicTreatment,
     alt: "A scalp being assessed with a dermatoscope at Fortes Clinic",
     eyebrow: "Trichology",
     caption: "The scalp is examined before any treatment is recommended",
+  },
+  {
+    kind: "image",
+    span: "lg:col-span-2",
+    src: ai.drSaeedConsult,
+    alt: "Dr Ahmad Saeed going through a treatment plan with a colleague",
+    eyebrow: "Your plan",
+    caption: "Sessions, costs and a realistic result, in writing",
   },
   {
     kind: "text",
@@ -67,23 +77,8 @@ const tiles: Tile[] = [
     kind: "text",
     span: "lg:col-span-1",
     n: "05",
-    t: "CQC-Registered, in Little Venice",
-    b: "A custom-built clinic in Central London, registered with and inspected by the Care Quality Commission.",
-  },
-  {
-    kind: "image",
-    span: "lg:col-span-2 lg:row-span-2",
-    src: ai.drSaeedConsult,
-    alt: "Dr Ahmad Saeed going through a treatment plan with a colleague",
-    eyebrow: "Your plan",
-    caption: "Sessions, costs and a realistic result, in writing",
-  },
-  {
-    kind: "text",
-    span: "lg:col-span-2 lg:row-span-2",
-    n: "06",
     t: "We Will Tell You When to Stop",
-    b: "If a treatment is not working for you, the right advice is to change it or stop, not to sell you another course of the same thing. We are a hair transplant clinic, which is precisely why our advice on non-surgical treatment is worth something.",
+    b: "If a treatment is not working for you, the right advice is to change it or stop, not to sell you another course of the same thing.",
   },
 ];
 
@@ -105,7 +100,7 @@ export default function NsWhyFortes() {
           </p>
         </div>
 
-        <div className="grid gap-4 lg:gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[minmax(190px,auto)]">
+        <div className="grid gap-4 lg:gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[minmax(260px,auto)]">
           {tiles.map((tile) =>
             tile.kind === "image" ? (
               <figure
