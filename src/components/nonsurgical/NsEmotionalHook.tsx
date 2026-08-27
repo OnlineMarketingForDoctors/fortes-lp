@@ -18,7 +18,7 @@ export default function NsEmotionalHook() {
                 Thinning hair rarely announces itself. It shows up in a
                 photograph, in bright bathroom lighting, or in a parting that has
                 quietly widened over a year. The follicles in those areas are
-                usually still alive — which is exactly why non-surgical hair loss
+                usually still alive, which is exactly why non-surgical hair loss
                 treatment works best when it starts early, before the hair is gone
                 rather than after.
               </p>
@@ -31,7 +31,7 @@ export default function NsEmotionalHook() {
               </p>
               <p className="text-white">
                 What decides which one suits you is the cause and stage of your
-                hair loss — which is what your free consultation is for.
+                hair loss, which is what your free consultation is for.
               </p>
             </div>
             <a href="#consult" className="btn-text !text-gold-light mt-9">

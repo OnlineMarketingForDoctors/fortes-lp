@@ -54,7 +54,7 @@ export default function NsProcess() {
                 From Consultation to Results
               </h2>
               <p className="lead text-gray-mid max-w-[46ch] mb-8">
-                The same pathway whichever treatment you end up having — because
+                The same pathway whichever treatment you end up having, because
                 the assessment comes first and the treatment follows from it.
               </p>
               <a href="#consult" className="btn btn-primary">

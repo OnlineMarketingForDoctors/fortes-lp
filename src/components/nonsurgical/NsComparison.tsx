@@ -78,7 +78,7 @@ export default function NsComparison() {
             PRP vs PRF vs Exosomes vs Regenera Activa
           </h2>
           <p className="lead text-gray-mid">
-            The differences that actually affect your decision — what each
+            The differences that actually affect your decision: what each
             treatment uses, how many visits it takes, and who it tends to suit.
           </p>
         </div>
@@ -143,7 +143,7 @@ export default function NsComparison() {
 
         <p className="text-xs text-gray-soft leading-relaxed max-w-3xl mt-6">
           This table compares how the treatments work and what they involve. It is
-          not a ranking — none of these is better than the others in the abstract,
+          not a ranking. None of these is better than the others in the abstract,
           and which one suits you depends on the cause and stage of your hair
           loss.
         </p>

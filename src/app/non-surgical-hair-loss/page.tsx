@@ -24,12 +24,12 @@ import { ai } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title:
-    "Non-Surgical Hair Loss Treatment London | PRP, PRF, Exosomes & Regenera Activa — Fortes Clinic",
+    "Non-Surgical Hair Loss Treatment London | PRP, PRF, Exosomes & Regenera Activa | Fortes Clinic",
   description:
     "Doctor-led non-surgical hair loss treatment in London. PRP hair treatment, PRF, exosome hair therapy and Regenera Activa at our CQC-registered clinic. Book a free consultation.",
   robots: { index: false, follow: false },
   openGraph: {
-    title: "Non-Surgical Hair Loss Treatment in London — Fortes Clinic",
+    title: "Non-Surgical Hair Loss Treatment in London | Fortes Clinic",
     description:
       "Four doctor-led treatments for thinning hair without surgery or downtime: PRP, PRF, exosome therapy and Regenera Activa. Free consultation in Little Venice.",
     type: "website",
@@ -75,7 +75,7 @@ export default function NonSurgicalHairLossPage() {
         <ContactForm
           eyebrow="Book"
           heading="Request a Consultation with Dr Saeed"
-          blurb="A private, clinician-led conversation about what is driving your hair loss and which non-surgical treatment — if any — is right for it. The initial consultation is free and there is no obligation to book treatment."
+          blurb="A private, clinician-led conversation about what is driving your hair loss and which non-surgical treatment, if any, is right for it. The initial consultation is free and there is no obligation to book treatment."
           image={ai.clinicRoom}
           imageAlt="The treatment room at Fortes Clinic in Little Venice"
         />

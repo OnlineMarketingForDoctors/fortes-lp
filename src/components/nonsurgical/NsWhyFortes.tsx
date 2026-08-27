@@ -8,7 +8,7 @@ const items = [
   },
   {
     t: "All Four Treatments in One Place",
-    b: "PRP, PRF, exosome therapy and Regenera Activa are all offered here — so the recommendation can follow your assessment rather than our equipment list.",
+    b: "PRP, PRF, exosome therapy and Regenera Activa are all offered here, so the recommendation can follow your assessment rather than our equipment list.",
   },
   {
     t: "PRF, Which Few London Clinics Offer",
@@ -24,7 +24,7 @@ const items = [
   },
   {
     t: "We Will Tell You When to Stop",
-    b: "If a treatment is not working for you, the right advice is to change it or stop — not to sell you another course of the same thing.",
+    b: "If a treatment is not working for you, the right advice is to change it or stop, not to sell you another course of the same thing.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function NsWhyFortes() {
           </div>
           <p className="lg:col-span-5 lead text-white/70">
             We are a hair transplant clinic. That is precisely why our advice on
-            non-surgical treatment is worth something — we have no reason to
+            non-surgical treatment is worth something. We have no reason to
             stretch a non-surgical course past the point where it helps.
           </p>
         </div>

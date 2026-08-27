@@ -11,7 +11,7 @@ const points = [
   {
     icon: MapPin,
     title: "Who we see",
-    body: "Most people booking PRP hair loss treatment London-side come to us from Central and West London, but we also see patients travelling from across the UK for treatments that are harder to find — PRF in particular.",
+    body: "Most people booking PRP hair loss treatment London-side come to us from Central and West London, but we also see patients travelling from across the UK for treatments that are harder to find, PRF in particular.",
   },
   {
     icon: Clock,

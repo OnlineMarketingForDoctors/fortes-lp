@@ -4,7 +4,7 @@ import { video, mediaLogos } from "@/lib/assets";
 import GoogleBadge from "./GoogleBadge";
 
 const bullets = [
-  "Doctor-led throughout — never a salesperson",
+  "Doctor-led throughout, never a salesperson",
   "PRP, PRF, exosomes and Regenera Activa under one roof",
   "No surgery, no stitches, no downtime",
   "For men and women, including diffuse thinning",
@@ -42,7 +42,7 @@ export default function NsHero() {
             Treatment in <span className="gold-text">London</span>
           </h1>
           <p className="lead text-white/85 max-w-xl mb-9">
-            Four doctor-led treatments for thinning hair — without surgery and
+            Four doctor-led treatments for thinning hair, without surgery and
             without downtime. Your consultation starts with finding out what is
             actually causing your hair loss, then choosing the treatment that
             fits it.

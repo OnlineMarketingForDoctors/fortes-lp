@@ -61,7 +61,7 @@ export default function NsPricing() {
                   single session, and it varies with how many areas are being
                   treated. Rather than publish a figure that changes the moment
                   we assess you, we give you a written quote covering the whole
-                  course — including whether we think a course is worth doing at
+                  course, including whether we think a course is worth doing at
                   all.
                 </p>
               </div>

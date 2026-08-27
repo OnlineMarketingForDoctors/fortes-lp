@@ -69,7 +69,7 @@ Thank you to Dr Saeed and his team at Fortes Clinic.`,
     color: "bg-rose-100 text-rose-700",
     meta: "Local Guide · 21 reviews",
     date: "4 months ago",
-    body: `Had my hair transplant done on Thursday — 1,700 grafts for the front corners and crown.
+    body: `Had my hair transplant done on Thursday, 1,700 grafts for the front corners and crown.
 
 The whole experience was genuinely excellent. I even fell asleep for part of it, which says a lot about how comfortable the process was.
 
@@ -105,9 +105,9 @@ Thanks again, everyone.`,
     date: "4 months ago",
     body: `Incredible natural results and a world class experience!!
 
-I had an FUE hair transplant — I cannot recommend Fortes Clinic in London highly enough. I did a lot of research beforehand and even visited Harley Street, but Fortes just had a much better feel. There was no pressure and it didn't feel "salesy" at all; it was clear from the start they just really know what they are doing.
+I had an FUE hair transplant. I cannot recommend Fortes Clinic in London highly enough. I did a lot of research beforehand and even visited Harley Street, but Fortes just had a much better feel. There was no pressure and it didn't feel "salesy" at all; it was clear from the start they just really know what they are doing.
 
-One of the best things about them is that they only take one patient per day, so you are the sole focus of the entire team. The communication is excellent; they are so quick to respond to every email and call, which really put me at ease. On the day of the surgery, I was initially quite nervous about the pain, but it was actually very minimal and nothing like I had feared. Dr Saeed is a total expert — so professional and confident that you just know you're in safe hands.
+One of the best things about them is that they only take one patient per day, so you are the sole focus of the entire team. The communication is excellent; they are so quick to respond to every email and call, which really put me at ease. On the day of the surgery, I was initially quite nervous about the pain, but it was actually very minimal and nothing like I had feared. Dr Saeed is a total expert, so professional and confident that you just know you're in safe hands.
 
 They really look after you throughout the day (the lunch provided was a great touch!) and the aftercare package is spot on. They provide everything from the shampoo to a neck pillow, so you don't have to worry about a thing once you leave.
 

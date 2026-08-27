@@ -53,7 +53,7 @@ function TreatmentBlock({
                 <li key={b.lead} className="flex items-start gap-3">
                   <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
                   <span className="text-[0.95rem] leading-relaxed text-ink/80">
-                    <span className="font-semibold text-ink">{b.lead}</span> — {b.rest}
+                    <span className="font-semibold text-ink">{b.lead}</span>: {b.rest}
                   </span>
                 </li>
               ))}

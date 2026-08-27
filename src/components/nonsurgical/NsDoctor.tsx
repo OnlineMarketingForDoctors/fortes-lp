@@ -36,7 +36,7 @@ export default function NsDoctor() {
                 </em>
                 , and performs Regenera Activa at the clinic. He sees
                 non-surgical treatment as the first conversation to have with
-                most patients — not the consolation prize when surgery is ruled
+                most patients, not the consolation prize when surgery is ruled
                 out.
               </p>
             </div>

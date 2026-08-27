@@ -10,7 +10,7 @@ const cases = [
   },
   {
     title: "Diffuse thinning across the whole scalp",
-    body: "Reduced volume everywhere rather than a defined bald patch — following illness, stress, medication or hormonal change. In women this is frequently post-partum or peri-menopausal, and it is often the group told they are not hair transplant candidates.",
+    body: "Reduced volume everywhere rather than a defined bald patch, following illness, stress, medication or hormonal change. In women this is frequently post-partum or peri-menopausal, and it is often the group told they are not hair transplant candidates.",
     rec: "Assessment first, then PRP, PRF or exosomes",
   },
   {
@@ -20,7 +20,7 @@ const cases = [
   },
   {
     title: "You cannot commit to monthly visits",
-    body: "Travel, shift work or family commitments make a monthly course difficult to sustain — and a course you cannot finish is not worth starting.",
+    body: "Travel, shift work or family commitments make a monthly course difficult to sustain, and a course you cannot finish is not worth starting.",
     rec: "Regenera Activa is a single session",
   },
   {
@@ -48,7 +48,7 @@ export default function NsTriage() {
               </h2>
               <p className="lead text-gray-mid max-w-[46ch] mb-9">
                 Hair loss treatment without surgery works best in a particular
-                window. These are the situations we see most often — open the one
+                window. These are the situations we see most often. Open the one
                 that sounds like you.
               </p>
               <div className="relative aspect-[4/3] rounded-[10px] overflow-hidden ring-1 ring-black/5 shadow-[var(--shadow-soft)]">

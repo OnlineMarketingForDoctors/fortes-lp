@@ -17,7 +17,7 @@ export default function NsTreatmentPicker() {
           </div>
           <p className="lg:col-span-5 lead text-gray-mid">
             Each one suits a different pattern and stage of hair loss. Your
-            consultation decides which — or which combination.
+            consultation decides which, or which combination.
           </p>
         </div>
 
