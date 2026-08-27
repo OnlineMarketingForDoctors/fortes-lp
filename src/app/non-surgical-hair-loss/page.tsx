@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import BackToTop from "@/components/BackToTop";
+import AnchorScroll from "@/components/AnchorScroll";
 import ContactForm from "@/components/ContactForm";
 import { SpinningDivider } from "@/components/SpinningBadge";
 import NsHero from "@/components/nonsurgical/NsHero";
@@ -54,6 +55,7 @@ export default function NonSurgicalHairLossPage() {
       <FloatingCTA />
       <WhatsAppButton side="left" />
       <BackToTop />
+      <AnchorScroll />
       <main>
         <NsHero />
         <NsReviewStrip />

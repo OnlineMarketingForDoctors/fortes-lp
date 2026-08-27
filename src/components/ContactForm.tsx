@@ -19,7 +19,7 @@ export default function ContactForm({
   imageAlt?: string;
 }) {
   return (
-    <section id="consult" className="bg-cream py-20 lg:py-28 overflow-hidden">
+    <section className="bg-cream py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
           {/* Left: image + details */}
@@ -49,7 +49,12 @@ export default function ContactForm({
 
           {/* Right: form card */}
           <div className="lg:col-span-7">
-            <div className="bg-white text-ink rounded-[12px] p-7 lg:p-10 shadow-[var(--shadow-soft)]">
+            {/* The booking CTAs point here rather than at the section, so a phone
+                lands on the form itself instead of the image stacked above it. */}
+            <div
+              id="consult"
+              className="scroll-mt-[84px] lg:scroll-mt-24 bg-white text-ink rounded-[12px] p-7 lg:p-10 shadow-[var(--shadow-soft)]"
+            >
               <div className="text-center mb-8">
                 <p className="eyebrow mb-3">{eyebrow}</p>
                 <h2 className="h-display text-[1.7rem] lg:text-[2.3rem] !leading-[1.12] text-ink">
