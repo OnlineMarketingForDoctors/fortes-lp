@@ -30,13 +30,11 @@ export default function NsHero() {
           <p className="eyebrow !text-gold-light mb-6">
             PRP · PRF · Exosomes · Regenera Activa
           </p>
-          {/* Three fixed lines from lg up: the subject, the offer, the place. */}
-          <h1 className="h-display text-[2.2rem] sm:text-[2.8rem] lg:text-[3.1rem] xl:text-[3.6rem] !leading-[1.1] text-white">
+          {/* Two fixed lines from lg up: the condition, then the offer. */}
+          <h1 className="h-display text-[2rem] sm:text-[2.5rem] lg:text-[2.75rem] xl:text-[3.1rem] !leading-[1.12] text-white">
             Non-Surgical Hair Loss
             <br />
-            Treatment
-            <br />
-            in <span className="gold-text">London</span>
+            Treatment in <span className="gold-text">London</span>
           </h1>
         </div>
       </div>
