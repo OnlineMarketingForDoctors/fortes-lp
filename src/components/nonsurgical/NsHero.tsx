@@ -26,14 +26,17 @@ export default function NsHero() {
                  lg:bg-none lg:bg-charcoal"
     >
       <div className="relative z-10 mx-auto max-w-[1280px] w-full px-5 lg:px-8 pt-28 lg:pt-0 text-white">
-        <div className="lg:max-w-3xl">
+        <div className="lg:max-w-none">
           <p className="eyebrow !text-gold-light mb-6">
             PRP · PRF · Exosomes · Regenera Activa
           </p>
-          <h1 className="h-display text-[2.2rem] sm:text-[2.8rem] lg:text-[3.6rem] !leading-[1.1] text-white">
+          {/* Three fixed lines from lg up: the subject, the offer, the place. */}
+          <h1 className="h-display text-[2.2rem] sm:text-[2.8rem] lg:text-[3.1rem] xl:text-[3.6rem] !leading-[1.1] text-white">
             Non-Surgical Hair Loss
             <br />
-            Treatment in <span className="gold-text">London</span>
+            Treatment
+            <br />
+            in <span className="gold-text">London</span>
           </h1>
         </div>
       </div>
